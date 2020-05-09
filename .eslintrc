@@ -11,6 +11,9 @@
     "react/jsx-filename-extension": [1, {
       "extensions": [".js", ".jsx"]
     }],
+    "import/no-unresolved": [2, {
+      "ignore": ["react", "gatsby", "history", "gatsby-link"]
+    }],
     "react/prop-types": 0
   }
 }
