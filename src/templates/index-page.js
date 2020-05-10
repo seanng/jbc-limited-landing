@@ -1,19 +1,19 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/Layout'
-import Features from '../components/Features'
+import Layout from '../components/Layout';
+// import Features from '../components/Features';
 
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
   subheading,
-  mainpitch,
-  description,
-  intro,
+  about,
+  network,
+  products,
 }) => (
   <div>
+    {/* TODO: replace this hero div. */}
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -62,64 +62,77 @@ export const IndexPageTemplate = ({
         </h3>
       </div>
     </div>
-    <section className="section section--gradient">
+    <section id="about" className="section section--gradient">
       <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <div className="content">
+              <h1 className="title has-text-centered">{about.title}</h1>
               <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
+                <p className="has-text-justified">{about.description}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <section id="network" className="section has-background-grey-lighter">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-12">
+            <div className="content">
+              <h1 className="title has-text-centered">{network.title}</h1>
+              <p className="has-text-centered">{network.description}</p>
+            </div>
+          </div>
+          {/* TODO: our network map go here. map = column 10 & legend = column 2? */}
+        </div>
+      </div>
+    </section>
+    <section id="products" className="section section--gradient">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <div className="content">
+              <h1 className="title has-text-centered">{products.title}</h1>
+              <p className="has-text-justified">{products.description}</p>
+            </div>
+          </div>
+          <div className="column is-12">
+            {/* TODO: products go here. */}
+          </div>
+        </div>
+        {/* <Features gridItems={intro.blurbs} /> */}
+        <div className="columns">
+          <div className="column is-12 has-text-centered">
+            <Link className="btn" to="/products">
+              See all products
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-)
+);
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        about={frontmatter.about}
+        network={frontmatter.network}
+        products={frontmatter.products}
       />
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -133,28 +146,33 @@ export const pageQuery = graphql`
             }
           }
         }
-        heading
         subheading
-        mainpitch {
+        about {
           title
           description
         }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
+        network {
+          title
+          description
+        }
+        products {
+          title
+          description
+          list {
+            name
+            images {
+              text
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 240, quality: 64) {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
             }
-            text
           }
-          heading
-          description
         }
       }
     }
   }
-`
+`;
