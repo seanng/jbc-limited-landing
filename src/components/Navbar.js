@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState, useEffect } from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
 
 const Navbar = () => {
@@ -30,9 +28,9 @@ const Navbar = () => {
     >
       <div className="container">
         <div className="navbar-brand">
-          <Link to="/" className="navbar-item" title="Logo">
+          <a href="/" className="navbar-item" title="Logo">
             <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </Link>
+          </a>
           {/* Hamburger menu */}
           <div
             className={`navbar-burger burger ${navBarActiveClass}`}
@@ -46,18 +44,18 @@ const Navbar = () => {
         </div>
         <div id="navMenu" className={`navbar-menu ${navBarActiveClass}`}>
           <div className="navbar-end has-text-centered">
-            <Link className="navbar-item" to="#about">
+            <a className="navbar-item" href="#about">
               About Us
-            </Link>
-            <Link className="navbar-item" to="#products">
-              Our Products
-            </Link>
-            <Link className="navbar-item" to="#network">
+            </a>
+            <a className="navbar-item" href="#network">
               Our Network
-            </Link>
-            <Link className="navbar-item" to="#contact">
+            </a>
+            <a className="navbar-item" href="#products">
+              Our Products
+            </a>
+            <a className="navbar-item" href="#contact">
               Contact Us
-            </Link>
+            </a>
           </div>
         </div>
       </div>
