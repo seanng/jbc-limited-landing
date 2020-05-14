@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav
       className="navbar is-transparent is-fixed-top"
-      style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', height: '100px' }}
+      style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', height: '100px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}
       role="navigation"
       aria-label="main-navigation"
     >

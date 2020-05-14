@@ -15,9 +15,13 @@ $trueblack: #000000
 $navbar-item-color: $trueblack
 $navbar-item-hover-color: $trueblack
 $family-sans-serif: "Poppins", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+// $widescreen: 1200px + (2 * $gap)
 
+a.navbar-item
+  padding: 0
+  margin: 0 20px
 a.navbar-item:hover
-  font-weight: 700
+  font-weight: bold
   border-bottom: 2px solid $brand-red
 
 .navbar .navbar-menu
@@ -58,11 +62,11 @@ a.navbar-item:hover
   background-size: cover
   background-position: top left
   background-attachment: fixed
-  padding: 186px 120px 0 120px
+  padding-top: 186px
 
 .cover-content
-  width: 100%
-  max-width: 480px
+  // width: 100%
+  max-width: 520px
 
 .cover-slogan
   margin-bottom: 26px
