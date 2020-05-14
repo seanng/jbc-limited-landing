@@ -33,40 +33,44 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </div>
-    <section id="about" className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="content">
-              <h1 className="title has-text-centered">{about.title}</h1>
-              <div className="content">
-                <p className="has-text-justified">{about.description}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="network" className="section has-background-grey-lighter">
+    <section id="about" className="section has-background-white section--gradient">
       <div className="container">
         <div className="columns">
           <div className="column is-12">
-            <div className="content">
-              <h1 className="title has-text-centered">{network.title}</h1>
-              <p className="has-text-centered">{network.description}</p>
+            <div className="content-wrapper">
+              <h1 className="title spaced-title has-text-grey-dark has-text-centered">
+                {about.title}
+              </h1>
+              <p className="has-text-justified has-prewrap has-text-grey is-size-4-widescreen">
+                {about.description}
+              </p>
             </div>
           </div>
-          {/* TODO: our network map go here. map = column 10 & legend = column 2? */}
         </div>
       </div>
     </section>
-    <section id="products" className="section section--gradient">
+    <section id="network" className="section">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-12">
+            <h1 className="title spaced-title has-text-centered">{network.title}</h1>
+            <p className="has-text-centered has-prewrap has-text-grey is-size-4-widescreen">
+              {network.description}
+            </p>
+          </div>
+          {/* TODO: our network map image goes here. map = column 10 & legend = column 2? */}
+        </div>
+      </div>
+    </section>
+    <section id="products" className="section has-background-white section--gradient">
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <div className="content">
-              <h1 className="title has-text-centered">{products.title}</h1>
-              <p className="has-text-justified">{products.description}</p>
+            <div className="content-wrapper">
+              <h1 className="title spaced-title has-text-centered">{products.title}</h1>
+              <p className="has-text-justified has-prewrap has-text-grey is-size-4-widescreen">
+                {products.description}
+              </p>
             </div>
           </div>
           <div className="column is-12">{/* TODO: products go here. */}</div>
