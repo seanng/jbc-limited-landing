@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
-// import Features from '../components/Features';
+import Contact from '../components/Contact';
 
 export const IndexPageTemplate = ({
   image,
@@ -85,6 +85,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
+    <Contact />
   </div>
 );
 
