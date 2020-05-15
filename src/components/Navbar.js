@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState, useEffect } from 'react'
-import logo from '../img/logo.svg'
+import logo from '../assets/img/logo.svg'
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false)

@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Your Partner in Global Sourcing Solutions
-image: /img/home-jumbotron.jpg
+image: /assets/img/home-jumbotron.jpg
 subheading: Support sustainable farming while enjoying a cup
 about:
   title: About JBC
@@ -25,13 +25,13 @@ products:
   list:
     - name: Product A
       images:
-        - image: /img/coffee.png
+        - image: /assets/img/coffee.png
           text: this is a nice photo angle of product A
-        - image: /img/coffee-gear.png
+        - image: /assets/img/coffee-gear.png
           text: this is a second angle of product A
     - name: Product B
       images:
-        - image: /img/tutorials.png
+        - image: /assets/img/tutorials.png
           text: this is a tutorial photo for Product B
 # intro:
 #   blurbs:
