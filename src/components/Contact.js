@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { navigate } from 'gatsby-link';
 
 function encode(data) {
   return Object.keys(data)

@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState, useEffect } from 'react'
+import useHideOnScroll from '../hooks/useHideOnScroll'
 import logo from '../assets/img/logo.svg'
 
 const Navbar = () => {
@@ -19,10 +20,19 @@ const Navbar = () => {
     }
   }, [isActive]);  
   
+  const isHidden = useHideOnScroll();
+
   return (
     <nav
       className="navbar is-transparent is-fixed-top"
-      style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', height: '100px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}
+      style={{
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
+        height: '100px',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        top: isHidden ? '-100px' : '0'
+      }}
       role="navigation"
       aria-label="main-navigation"
     >
