@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react'
 import useHideOnScroll from '../hooks/useHideOnScroll'
 import logo from '../assets/img/logo.svg'
 
+const NAVBAR_HEIGHT = 80
+
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false)
   const [navBarActiveClass, setNavBarActiveClass] = useState('')
@@ -27,19 +29,19 @@ const Navbar = () => {
       className="navbar is-transparent is-fixed-top"
       style={{
         backgroundColor: 'rgba(255, 255, 255, 0.5)',
-        height: '100px',
+        height: `${NAVBAR_HEIGHT}px`,
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        top: isHidden ? '-100px' : '0'
+        top: isHidden ? `-${NAVBAR_HEIGHT + 5}px` : '0'
       }}
       role="navigation"
       aria-label="main-navigation"
     >
       <div className="container">
         <div className="navbar-brand">
-          <a href="/" className="navbar-item" title="Logo">
-            <img src={logo} alt="Kaldi" style={{ width: '182px' }} />
+          <a href="#" className="navbar-item" title="Logo">
+            <img src={logo} alt="Kaldi" style={{ width: '120px' }} />
           </a>
           {/* Hamburger menu */}
           <div

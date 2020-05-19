@@ -23,6 +23,7 @@ network:
   description: |
     JBC - Your Partner in Global Sourcing Solutions
     We source from over 70 countries with more than 400 sourcing partners
+  image: /img/network-map.png
 products:
   title: Our Products
   description: One of our key strengths is our unique ability to help customers
