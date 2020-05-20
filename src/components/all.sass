@@ -20,6 +20,78 @@ $family-sans-serif: "Poppins", BlinkMacSystemFont, -apple-system, "Segoe UI", "R
 // contact submit button
 $button-padding-horizontal: 3em
 
+// ProductsTabsList ----->
+.tabs
+  box-sizing: border-box
+  position: relative
+  display: flex
+  flex-direction: column
+  width: 100%
+  margin: 110px 0 100px
+
+.tab-list
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  padding-bottom: 24px
+
+.tab
+  outline: none
+  cursor: pointer
+  display: flex
+  flex-direction: column
+  align-items: center
+  border: none
+  font-size: 1rem
+  line-height: 24px
+  padding: 0
+  max-width: 270px
+  padding-bottom: 20px
+  color: #000000
+  transition: color 0.16s ease-in-out, background-color 0.16s ease-in-out, border-color 0.16s ease-in-out
+  @media (min-width: 1216px)
+    font-size: 1.5rem !important
+    padding-bottom: 35px
+
+// .tab:focus,
+// .tab:focus-visible
+//   box-shadow: 0 0 0 4px rgba(73, 39, 150, 0.5)
+
+.tab-text
+  display: flex
+  justify-content: center
+  align-items: center
+
+.tab.active
+  color: #A23958
+  cursor: default
+  font-weight: bold
+  border-bottom: 6px solid #A23958
+
+.tab-panel-list
+  margin: 0
+  padding: 0
+  position: relative
+
+.tab-panel
+  position: absolute
+  width: 100%
+
+.tab-panel-content-wrapper
+  display: flex
+  flex-direction: row
+
+.tab-panel-content-left
+  flex: 1
+  @media (max-width: 769px)
+    display: none
+
+.tab-panel-content-right
+  flex: 1
+  padding-left: 60px
+
+// <----- TABS END 
+
 .has-prewrap
   white-space: pre-wrap
 
