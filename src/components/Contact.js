@@ -1,5 +1,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 // eslint-disable-next-line import/no-extraneous-dependencies
 
 function encode(data) {
@@ -11,6 +16,7 @@ function encode(data) {
 export default function Contact() {
   const [validationMessage, setValidationMessage] = useState('')
   const [isValidationShown, setIsValidationShown] = useState(false);
+  const [isValidated, setIsValidated] = useState(false)
   const [val, setVal] = useState({ isValidated: false });
   const handleChange = e => {
     setVal({
@@ -22,6 +28,11 @@ export default function Contact() {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
+    if (form.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    setIsValidated(true);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -33,128 +44,95 @@ export default function Contact() {
       .then(() => {
         setValidationMessage(`Thank you for your message, ${val.name}!`)
         setIsValidationShown(true)
-        setVal({ isValidated: false });
+        setIsValidated(false);
       })
       .catch(error => {
         setValidationMessage(`Sorry there was an error submitting your message. \n \n Error Code: ${error.status}`);
         setIsValidationShown(true);
-        setVal({ isValidated: false });
+        setIsValidated(false);
       });
   };
 
   return (
-    <section id="contact" className="section">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-12">
-            <h1 className="title spaced-title has-text-centered">Contact Us</h1>
-            <p className="has-text-centered has-text-grey">
+    <section id="contact" className="bg-light-grey">
+      <Container>
+        <Row className="index-contact-introduction">
+          <Col>
+            <h1 className="index-title">Contact Us</h1>
+            <p className="text-grey text-center">
               Tell us how we can help you!
             </p>
-            <form
-              name="contact"
-              method="post"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              onSubmit={handleSubmit}
-            >
-              {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-              <input type="hidden" name="form-name" value="contact" />
-              <div hidden>
-                <label>
-                  Don’t fill this out:{' '}
-                  <input name="bot-field" onChange={handleChange} />
-                </label>
-              </div>
-              <div className="columns">
-                <div className="column is-5">
-                  <div className="field">
-                    <label className="label" htmlFor="name">
-                      Name
-                    </label>
-                    <div className="control">
-                      <input
-                        className="input"
-                        type="text"
-                        name="name"
-                        onChange={handleChange}
-                        id="name"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="field">
-                    <label className="label" htmlFor="email">
-                      Email
-                    </label>
-                    <div className="control">
-                      <input
-                        className="input"
-                        type="text"
-                        name="email"
-                        onChange={handleChange}
-                        id="email"
-                        required
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="column is-5 is-offset-2">
-                  <div className="has-text-left">
-                    <div className="field">
-                      <label className="label" htmlFor="phone">
-                        Phone number (optional)
-                      </label>
-                      <div className="control">
-                        <input
-                          className="input"
-                          type="number"
-                          name="phone"
-                          onChange={handleChange}
-                          id="phone"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="columns">
-                <div className="column is-12">
-                  <div className="field">
-                    <label className="label" htmlFor="message">
-                      Message
-                    </label>
-                    <div className="control">
-                      <textarea
-                        className="textarea"
-                        rows="5"
-                        type="text"
-                        name="message"
-                        onChange={handleChange}
-                        id="message"
-                        required
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="columns">
-                <div className="column is-7">
-                  {isValidationShown && validationMessage}
-                </div>
-                <div className="column is-5">
-                  <button
-                    type="submit"
-                    className="is-pulled-right button has-background-grey has-text-white is-rounded"
-                  >
-                    SUBMIT
-                  </button>
-                </div>
-              </div>
-            </form>
+          </Col>
+        </Row>
+        <Form
+          noValidate
+          validated={isValidated}
+          onSubmit={handleSubmit}
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <div hidden>
+            <label>
+              Don’t fill this out:{' '}
+              <input name="bot-field" onChange={handleChange} />
+            </label>
           </div>
-        </div>
-      </div>
+          <Row>
+            <Form.Group controlId="name" as={Col} sm={5}>
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                required
+                name="name"
+                onChange={handleChange}
+                type="text"
+              />
+            </Form.Group>
+            <Col sm={2} />
+            <Form.Group controlId="number" as={Col} sm={5}>
+              <Form.Label>Phone number</Form.Label>
+              <Form.Control
+                name="number"
+                onChange={handleChange}
+                type="tel"
+                width="80%"
+              />
+            </Form.Group>
+          </Row>
+          <Row>
+            <Form.Group controlId="email" as={Col} sm={5}>
+              <Form.Label>Email</Form.Label>
+              <Form.Control
+                required
+                name="email"
+                onChange={handleChange}
+                type="email"
+                width="80%"
+              />
+            </Form.Group>
+            <Col />
+          </Row>
+          <Row>
+            <Form.Group controlId="exampleForm.ControlTextarea1" as={Col}>
+              <Form.Label>Message</Form.Label>
+              <Form.Control
+                required
+                onChange={handleChange}
+                name="message"
+                as="textarea"
+                rows="5"
+              />
+            </Form.Group>
+          </Row>
+          <Row>
+            <Col sm={7}>{isValidationShown && validationMessage}</Col>
+            <Col sm={5} className="text-right">
+              <Button className="index-contact-submit-button" type="submit">
+                SUBMIT
+              </Button>
+            </Col>
+          </Row>
+        </Form>
+      </Container>
     </section>
   );
 }

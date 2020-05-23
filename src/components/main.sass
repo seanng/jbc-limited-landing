@@ -1,0 +1,174 @@
+/** variables **/
+$sm: 576px
+$md: 768px
+$lg: 992px
+$xl: 1200px
+$maroon: #A23958
+
+/** GLOBALS **/
+body
+  font-family: "Poppins", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+  color: #2C2E30
+  font-size: 1rem
+  letter-spacing: 0.5px
+  font-weight: 300
+  @media (min-width: $sm)
+    font-size: 1.1rem
+  @media (min-width: $md)
+    font-size: 1.3rem
+  @media (min-width: $lg)
+    font-size: 1.5rem
+
+.prewrap
+  white-space: pre-wrap
+
+.text-grey
+  color: #7E8085
+
+.text-white
+  color: #fff
+
+.bg-light-grey
+  background-color: #f7f7f7
+
+.text-extra-light
+  font-weight: 200
+
+.text-normal
+  font-weight: 300
+
+.text-regular
+  font-weight: 400
+
+.text-bold
+  font-weight: 600
+
+.index-title
+  font-size: 2rem
+  line-height: 3rem
+  margin-bottom: 1.25rem
+  font-weight: 600
+  text-align: center
+
+/** NAVBAR **/
+.navbar-nav > .nav-item > a.nav-link
+  color: black
+  font-size: 1rem
+  margin: 13px 30px
+  margin-right: 0px
+
+.navbar-nav > .nav-item > a.nav-link.is-active
+  font-weight: 600
+  border-bottom: 4px solid $maroon
+
+/** INDEX-COVER **/
+.index-cover-container
+  margin-top: 0
+  width: 100vw
+  height: 700px
+  background-size: cover
+  background-position: top left
+  background-attachment: fixed
+  padding-top: 186px
+
+.index-cover-content
+  max-width: 600px
+  color: white
+
+.index-cover-title
+  font-size: 3.125rem
+  font-weight: 600
+  line-height: 3.75rem
+  margin-bottom: 1rem
+
+.index-cover-subheading
+  font-weight: 400
+  letter-spacing: 0.6px
+  font-size: 1.375rem
+
+.index-cover-contact-button
+  background-color: $maroon
+  height: 55px
+  width: 255px
+  border: 0
+  margin-top: 50px
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 1rem
+  font-weight: 200
+  &:hover
+    background-color: $maroon
+  &:active
+    background-color: $maroon !important
+  &:focus
+    background-color: $maroon
+
+/** INDEX-ABOUT **/
+#about
+  padding: 79px 0 111px
+
+/** INDEX-NETWORK **/
+#network
+  padding: 102px 0 97px
+
+.index-network-content-wrapper
+  margin-bottom: 93px
+
+/** INDEX-PRODUCTS **/
+
+#products
+  padding: 110px 0 90px
+
+.border-bottom-grey
+  border-bottom: 1px solid #979797
+
+.index-product-introduction
+  margin-bottom: 100px
+
+.index-product-tab.nav-link
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: #000000
+  background-color: transparent
+  padding-bottom: 37px
+  border-radius: 0px
+  font-weight: 300
+  height: 100%
+  &:focus
+    outline-color: white
+
+.index-product-tab.nav-link.active
+  background-color: transparent
+  color: $maroon
+  border-bottom: 6px solid $maroon
+  font-weight: 600
+  &:focus
+    outline-color: white
+
+.index-product-tab-pane
+  padding-top: 75px
+
+/** INDEX-CONTACT **/
+#contact
+  padding: 5rem 1.5rem 6rem
+
+.index-contact-introduction
+  padding-bottom: 72px
+
+.index-contact-submit-button
+  background-color: #6D6D6D
+  border-radius: 20px
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: 200
+  padding: 7px 60px
+  float: right
+  &:hover
+    background-color: #6D6D6D
+  &:active
+    background-color: #6D6D6D !important
+  &:focus
+    background-color: #6D6D6D

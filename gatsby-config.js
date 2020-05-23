@@ -8,7 +8,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Poppins'],
+          families: ['Poppins:200,300,400,600', 'Lato'],
         },
       },
     },
@@ -92,5 +92,11 @@ module.exports = {
       },
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
+    {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        offset: 0
+      }
+    }
   ],
 };

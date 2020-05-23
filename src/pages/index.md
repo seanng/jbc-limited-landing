@@ -31,15 +31,20 @@ products:
     supply of seafood products, our just-in-time delivery helps customers keep
     their inventories at an optimal level - thereby safeguarding against
     interrupted supplies.
-  list:
-    - name: Product A
+  categories:
+    - label: 'Protective Equipment'
       images:
-        - image: /assets/img/coffee.png
-          text: this is a nice photo angle of product A
-        - image: /assets/img/coffee-gear.png
-          text: this is a second angle of product A
-    - name: Product B
+        - source: /img/coffee.png
+        - source: /img/coffee-gear.png
+        - source: /img/coffee.png
+    - label: 'Seafood'
       images:
-        - image: /assets/img/tutorials.png
-          text: this is a tutorial photo for Product B
+        - source: /img/coffee.png
+        - source: /img/coffee-gear.png
+        - source: /img/coffee.png
+    - label: 'Durian'
+      images:
+        - source: /img/coffee.png
+        - source: /img/coffee-gear.png
+        - source: /img/coffee.png
 ---

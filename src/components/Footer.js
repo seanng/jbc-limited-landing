@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 export default function Footer() {
   return (
@@ -11,24 +11,24 @@ export default function Footer() {
           </div>
           <div className="column is-2">
             <p className="footer-heading">Quick Links</p>
-            <Link to="#about">About Us</Link>
-            <Link to="#network">Our Network</Link>
-            <Link to="#products">Our Products</Link>
-            <Link to="#contact">Contact Us</Link>
+            <AnchorLink to="/#about">About Us</AnchorLink>
+            <AnchorLink to="/#network">Our Network</AnchorLink>
+            <AnchorLink to="/#products">Our Products</AnchorLink>
+            <AnchorLink to="/#contact">Contact Us</AnchorLink>
           </div>
           <div className="column is-2">
             <p className="footer-heading">Pages</p>
-            <Link to="#about">About Us</Link>
-            <Link to="#network">Our Network</Link>
-            <Link to="#products">Our Products</Link>
-            <Link to="#contact">Contact Us</Link>
+            <AnchorLink to="/#about">About Us</AnchorLink>
+            <AnchorLink to="/#network">Our Network</AnchorLink>
+            <AnchorLink to="/#products">Our Products</AnchorLink>
+            <AnchorLink to="/#contact">Contact Us</AnchorLink>
           </div>
           <div className="column is-2">
             <p className="footer-heading">Legal Stuff</p>
-            <Link to="#about">About Us</Link>
-            <Link to="#network">Our Network</Link>
-            <Link to="#products">Our Products</Link>
-            <Link to="#contact">Contact Us</Link>
+            <AnchorLink to="/#about">About Us</AnchorLink>
+            <AnchorLink to="/#network">Our Network</AnchorLink>
+            <AnchorLink to="/#products">Our Products</AnchorLink>
+            <AnchorLink to="/#contact">Contact Us</AnchorLink>
           </div>
         </div>
       </div>

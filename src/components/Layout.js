@@ -3,7 +3,9 @@ import { Helmet } from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import Footer from './Footer'
 import Navbar from './Navbar'
-import './all.sass'
+// import './all.sass'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './main.sass'
 import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ children }) => {
@@ -43,7 +45,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       <div>{children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
