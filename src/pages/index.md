@@ -35,16 +35,25 @@ products:
     - label: 'Protective Equipment'
       images:
         - source: /img/coffee.png
+          name: 'PPE 1'
         - source: /img/coffee-gear.png
+          name: 'PPE 2'
         - source: /img/coffee.png
+          name: 'PPE 3'
     - label: 'Seafood'
       images:
         - source: /img/coffee.png
+          name: 'Seafood 1'
         - source: /img/coffee-gear.png
+          name: 'Seafood 2'
         - source: /img/coffee.png
+          name: 'Seafood 3'
     - label: 'Durian'
       images:
         - source: /img/coffee.png
+          name: 'Durian 1'
         - source: /img/coffee-gear.png
+          name: 'Durian 2'
         - source: /img/coffee.png
+          name: 'Durian 3'
 ---

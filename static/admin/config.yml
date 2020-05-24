@@ -95,7 +95,10 @@ collections:
                           name: images,
                           widget: list,
                           fields:
-                            [{ label: Source, name: source, widget: image }],
+                            [
+                              { label: Source, name: source, widget: image },
+                              { label: Name, name: name, widget: string },
+                            ],
                         },
                       ],
                   },
