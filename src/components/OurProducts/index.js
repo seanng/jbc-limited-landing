@@ -47,10 +47,10 @@ export default function OurProducts({ title, description, categories = [] }) {
                 <Row>
                   <Col>
                     <Carousel controls={false}>
-                      {images.map(({ source }) => (
+                      {images.map(({ source }, index) => (
                         <Carousel.Item>
                           <PreviewCompatibleImage
-                            key={source.childImageSharp.fluid.src}
+                            key={index}
                             imageInfo={source}
                           />
                         </Carousel.Item>

@@ -14,7 +14,13 @@ const IndexPagePreview = ({ entry, getAsset }) => {
       subheading={data.subheading}
       about={data.about}
       network={data.network}
-      products={data.products || { list: [] } }
+      products={{
+        ...data.products,
+        categories: entry.getIn(['data', 'products', 'categories']).map(cat => ({
+          label: cat.get('label'),
+          images: cat.get('images').map(img => ({ source: getAsset(img.get('source'))}))
+        }))
+      }}
     />
   );
 };
