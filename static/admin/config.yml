@@ -12,6 +12,32 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: 'product_types'
+    label: 'Product Types'
+    folder: 'src/pages/product-types'
+    create: true
+    identifier_field: name
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Category', name: 'category', widget: 'string' }
+  - name: 'products'
+    label: 'Products'
+    folder: 'src/pages/products'
+    create: true
+    identifier_field: name
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - {
+          label: 'Product Type',
+          name: 'product_type',
+          widget: 'relation',
+          collection: 'product_types',
+          searchFields: ['name', 'category'],
+          valueField: 'name',
+          displayFields: ['{{category}} - {{name}}'],
+        }
   - name: 'pages'
     label: 'Pages'
     files:
@@ -60,7 +86,7 @@ collections:
                   {
                     label: Categories,
                     name: categories,
-                    widget: categories,
+                    widget: list,
                     fields:
                       [
                         { label: Label, name: label, widget: string },

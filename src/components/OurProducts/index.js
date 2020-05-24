@@ -9,7 +9,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Nav from 'react-bootstrap/Nav';
 import PreviewCompatibleImage from '../PreviewCompatibleImage';
 
-export default function OurProducts({ title, description, categories }) {
+export default function OurProducts({ title, description, categories = [] }) {
   return (
     <section id="products">
       <Container>
@@ -21,14 +21,14 @@ export default function OurProducts({ title, description, categories }) {
         </Row>
         <TabContainer
           id="product-categories-tab-container"
-          defaultActiveKey={categories[0].label}
+          defaultActiveKey={0}
         >
           <Row>
             <Col>
               <Nav justify variant="pills" className="border-bottom-grey">
-                {categories.map(({ label }) => (
+                {categories.map(({ label }, idx) => (
                   <Nav.Item key={label}>
-                    <Nav.Link className="index-product-tab" eventKey={label}>
+                    <Nav.Link className="index-product-tab" eventKey={idx}>
                       {/* picture */}
                       {label}
                     </Nav.Link>
@@ -38,8 +38,12 @@ export default function OurProducts({ title, description, categories }) {
             </Col>
           </Row>
           <TabContent>
-            {categories.map(({ label, images }) => (
-              <TabPane key={label} eventKey={label} className="index-product-tab-pane">
+            {categories.map(({ label, images }, idx) => (
+              <TabPane
+                key={label}
+                eventKey={idx}
+                className="index-product-tab-pane"
+              >
                 <Row>
                   <Col>
                     <Carousel controls={false}>
