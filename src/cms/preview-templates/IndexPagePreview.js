@@ -13,12 +13,18 @@ const IndexPagePreview = ({ entry, getAsset }) => {
       title={data.title}
       subheading={data.subheading}
       about={data.about}
-      network={data.network}
+      network={{
+        ...data.network,
+        image: getAsset(data.network.image)
+      }}
       products={{
         ...data.products,
-        categories: entry.getIn(['data', 'products', 'categories']).map(cat => ({
-          label: cat.get('label'),
-          images: cat.get('images').map(img => ({ source: getAsset(img.get('source'))}))
+        categories: data.products.categories.map(cat => ({
+          label: cat.label,
+          images: cat.images.map(img => ({
+            name: img.name,
+            source: getAsset(img.source)
+          }))
         }))
       }}
     />
