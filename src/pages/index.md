@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
 title: Your Partner in Global Sourcing Solutions
-image: /img/screenshot-2020-05-18-at-10.19.15-pm.png
-subheading: Support sustainable farming while enjoying a cup
+# image: /img/screenshot-2020-05-18-at-10.19.15-pm.png
+subheading: ''
 about:
   title: About JBC
   description: >
