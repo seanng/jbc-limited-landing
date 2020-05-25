@@ -26,21 +26,19 @@ export default function OurProducts({ title, description, categories = [] }) {
           <Row>
             <Col>
               <Nav justify variant="pills" className="border-bottom-grey">
-                {categories.map(
-                  ({ label, thumbnail }, idx) => (
-                    <Nav.Item key={label}>
-                      <Nav.Link className="index-product-tab" eventKey={idx}>
-                        <div className="index-product-tab-thumbnail-wrapper">
-                          <PreviewCompatibleImage
-                            width="80%"
-                            imageInfo={thumbnail}
-                          />
-                        </div>
-                        {label}
-                      </Nav.Link>
-                    </Nav.Item>
-                  )
-                )}
+                {categories.map(({ label, thumbnail }, idx) => (
+                  <Nav.Item key={label}>
+                    <Nav.Link className="index-product-tab" eventKey={idx}>
+                      <div className="index-product-tab-thumbnail-wrapper">
+                        <PreviewCompatibleImage
+                          width="80%"
+                          imageInfo={thumbnail}
+                        />
+                      </div>
+                      {label}
+                    </Nav.Link>
+                  </Nav.Item>
+                ))}
               </Nav>
             </Col>
           </Row>
@@ -61,7 +59,9 @@ export default function OurProducts({ title, description, categories = [] }) {
                       ))}
                     </Carousel>
                   </Col>
-                  <Col>{desc}</Col>
+                  <Col>
+                    <p className="prewrap text-grey">{desc}</p>
+                  </Col>
                 </Row>
               </TabPane>
             ))}
