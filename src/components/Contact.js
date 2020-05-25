@@ -14,10 +14,10 @@ function encode(data) {
 }
 
 export default function Contact() {
-  const [validationMessage, setValidationMessage] = useState('')
-  const [isValidationShown, setIsValidationShown] = useState(false);
-  const [isValidated, setIsValidated] = useState(false)
-  const [val, setVal] = useState({ isValidated: false });
+  const [validationMessage, setValidationMessage] = useState('');
+  const [isValidationError, setIsValidationError] = useState(false)
+  const [isValidated, setIsValidated] = useState(false);
+  const [val, setVal] = useState({ });
   const handleChange = e => {
     setVal({
       ...val,
@@ -25,32 +25,36 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
     const form = e.target;
-    if (form.checkValidity() === false) {
+    if (!form.checkValidity()) {
       e.preventDefault();
       e.stopPropagation();
+      setIsValidationError(true);
+      setValidationMessage(`Please fill out all fields correctly.`);
+      setIsValidated(true);
+      return;
     }
-    setIsValidated(true);
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...val,
-      }),
-    })
-      .then(() => {
-        setValidationMessage(`Thank you for your message, ${val.name}!`)
-        setIsValidationShown(true)
-        setIsValidated(false);
-      })
-      .catch(error => {
-        setValidationMessage(`Sorry there was an error submitting your message. \n \n Error Code: ${error.status}`);
-        setIsValidationShown(true);
-        setIsValidated(false);
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': form.getAttribute('name'),
+          ...val,
+        }),
       });
+      setIsValidationError(false);
+      setValidationMessage(`Thank you for your message, ${val.name}!`);
+      setIsValidated(false);
+    } catch (error) {
+      setIsValidationError(true);
+      setValidationMessage(
+        `Sorry there was an error submitting your message. \n \n Error Code: ${error.status}`
+      );
+      setIsValidated(false);
+    }
   };
 
   return (
@@ -124,7 +128,9 @@ export default function Contact() {
             </Form.Group>
           </Row>
           <Row>
-            <Col sm={7}>{isValidationShown && validationMessage}</Col>
+            <Col sm={7} style={{ color: isValidationError ? 'red' : 'green' }}>
+              {validationMessage}
+            </Col>
             <Col sm={5} className="text-right">
               <Button className="index-contact-submit-button" type="submit">
                 SUBMIT
