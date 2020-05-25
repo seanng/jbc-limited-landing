@@ -21,6 +21,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         ...data.products,
         categories: data.products.categories.map(cat => ({
           label: cat.label,
+          thumbnail: getAsset(cat.thumbnail),
           images: cat.images.map(img => ({
             name: img.name,
             source: getAsset(img.source)

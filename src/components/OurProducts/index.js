@@ -26,10 +26,10 @@ export default function OurProducts({ title, description, categories = [] }) {
           <Row>
             <Col>
               <Nav justify variant="pills" className="border-bottom-grey">
-                {categories.map(({ label }, idx) => (
+                {categories.map(({ label, thumbnail }, idx) => (
                   <Nav.Item key={label}>
                     <Nav.Link className="index-product-tab" eventKey={idx}>
-                      {/* picture */}
+                      <PreviewCompatibleImage imageInfo={thumbnail} />
                       {label}
                     </Nav.Link>
                   </Nav.Item>
