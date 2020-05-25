@@ -4,6 +4,7 @@ $md: 768px
 $lg: 992px
 $xl: 1200px
 $maroon: #A23958
+$navbar-height: 80px
 
 /** GLOBALS **/
 body
@@ -12,6 +13,7 @@ body
   font-size: 1rem
   letter-spacing: 0.5px
   font-weight: 300
+  padding-top: $navbar-height
   @media (min-width: $sm)
     font-size: 1.1rem
   @media (min-width: $md)
@@ -51,6 +53,7 @@ body
   text-align: center
 
 /** NAVBAR **/
+
 .navbar-nav > .nav-item > a.nav-link
   color: black
   font-size: 1rem
@@ -124,11 +127,14 @@ body
   border-bottom: 1px solid #979797
 
 .index-product-introduction
-  margin-bottom: 100px
+  margin-bottom: 50px
+  @media (min-width: $md)
+    margin-bottom: 100px
 
 .index-product-tab.nav-link
   display: flex
   flex-direction: column
+  justify-content: space-between
   align-items: center
   color: #000000
   background-color: transparent
@@ -146,6 +152,19 @@ body
   font-weight: 600
   &:focus
     outline-color: white
+
+.index-product-tab-thumbnail-wrapper
+  border-radius: 50%
+  background-color: #EDEBDC
+  width: 75px
+  height: 75px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-bottom: 1.5rem
+  @media (min-width: $md)
+    width: 140px
+    height: 140px
 
 .index-product-tab-pane
   padding-top: 75px

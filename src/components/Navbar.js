@@ -4,11 +4,8 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import BsNavbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
-import React, { useState, useEffect } from 'react';
-import useHideOnScroll from '../hooks/useHideOnScroll';
+import React, { useState } from 'react';
 import logo from '../assets/img/logo.svg';
-
-const NAVBAR_HEIGHT = 80;
 
 const LINKS = [
   { key: 'about', label: 'About Us' },
@@ -20,9 +17,8 @@ const LINKS = [
 const Navbar = () => {
   const [selectedKey, setSelectedKey] = useState('');
 
-
   return (
-    <BsNavbar sticky="top" collapseOnSelect expand="lg">
+    <BsNavbar bg="white" fixed="top" collapseOnSelect expand="lg">
       <Container>
         <BsNavbar.Brand href="">
           <img src={logo} alt="Kaldi" style={{ width: '120px' }} />

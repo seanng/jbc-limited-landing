@@ -34,6 +34,7 @@ products:
   categories:
     - label: 'Protective Equipment'
       thumbnail: /img/durian.png
+      description: Please fill me out.
       images:
         - source: /img/coffee.png
           name: 'PPE 1'
@@ -43,6 +44,7 @@ products:
           name: 'PPE 3'
     - label: 'Seafood'
       thumbnail: /img/seafood.png
+      description: Please fill me out.
       images:
         - source: /img/coffee.png
           name: 'Seafood 1'
@@ -52,6 +54,7 @@ products:
           name: 'Seafood 3'
     - label: 'Durian'
       thumbnail: /img/durian.png
+      description: Please fill me out.
       images:
         - source: /img/coffee.png
           name: 'Durian 1'

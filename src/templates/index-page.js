@@ -77,7 +77,16 @@ export const pageQuery = graphql`
           description
           categories {
             label
+            description
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 1024, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             images {
+              name
               source {
                 childImageSharp {
                   fluid(maxWidth: 1024, quality: 100) {

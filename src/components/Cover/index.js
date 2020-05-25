@@ -22,7 +22,7 @@ export default function Cover({ image, title, subheading }) {
               <h1 className="index-cover-title">
                 {title}
               </h1>
-              <h3 index-cover-subheading>
+              <h3 className="index-cover-subheading">
                 {subheading}
               </h3>
               <Button className="index-cover-contact-button" as={AnchorLink} to="/#contact">

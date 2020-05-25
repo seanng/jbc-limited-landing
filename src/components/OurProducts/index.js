@@ -26,19 +26,26 @@ export default function OurProducts({ title, description, categories = [] }) {
           <Row>
             <Col>
               <Nav justify variant="pills" className="border-bottom-grey">
-                {categories.map(({ label, thumbnail }, idx) => (
-                  <Nav.Item key={label}>
-                    <Nav.Link className="index-product-tab" eventKey={idx}>
-                      <PreviewCompatibleImage imageInfo={thumbnail} />
-                      {label}
-                    </Nav.Link>
-                  </Nav.Item>
-                ))}
+                {categories.map(
+                  ({ label, thumbnail }, idx) => (
+                    <Nav.Item key={label}>
+                      <Nav.Link className="index-product-tab" eventKey={idx}>
+                        <div className="index-product-tab-thumbnail-wrapper">
+                          <PreviewCompatibleImage
+                            width="80%"
+                            imageInfo={thumbnail}
+                          />
+                        </div>
+                        {label}
+                      </Nav.Link>
+                    </Nav.Item>
+                  )
+                )}
               </Nav>
             </Col>
           </Row>
           <TabContent>
-            {categories.map(({ label, images }, idx) => (
+            {categories.map(({ description: desc, label, images }, idx) => (
               <TabPane
                 key={label}
                 eventKey={idx}
@@ -47,17 +54,14 @@ export default function OurProducts({ title, description, categories = [] }) {
                 <Row>
                   <Col>
                     <Carousel controls={false}>
-                      {images.map(({ source }, index) => (
-                        <Carousel.Item>
-                          <PreviewCompatibleImage
-                            key={index}
-                            imageInfo={source}
-                          />
+                      {images.map(({ source, name }) => (
+                        <Carousel.Item key={name}>
+                          <PreviewCompatibleImage imageInfo={source} />
                         </Carousel.Item>
                       ))}
                     </Carousel>
                   </Col>
-                  <Col>{label}</Col>
+                  <Col>{desc}</Col>
                 </Row>
               </TabPane>
             ))}
