@@ -33,6 +33,7 @@ products:
     interrupted supplies.
   categories:
     - label: 'Protective Equipment'
+      thumbnail: /img/durian.png
       images:
         - source: /img/coffee.png
           name: 'PPE 1'
@@ -41,6 +42,7 @@ products:
         - source: /img/coffee.png
           name: 'PPE 3'
     - label: 'Seafood'
+      thumbnail: /img/seafood.png
       images:
         - source: /img/coffee.png
           name: 'Seafood 1'
@@ -49,6 +51,7 @@ products:
         - source: /img/coffee.png
           name: 'Seafood 3'
     - label: 'Durian'
+      thumbnail: /img/durian.png
       images:
         - source: /img/coffee.png
           name: 'Durian 1'
