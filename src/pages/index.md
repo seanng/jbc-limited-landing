@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
 title: Your Partner in Global Sourcing Solutions
-# image: /img/screenshot-2020-05-18-at-10.19.15-pm.png
-subheading: ''
+image: /img/apple-touch-icon.png
+subheading: test
 about:
   title: About JBC
   description: >
@@ -21,7 +21,6 @@ about:
 network:
   title: Our Network
   description: |
-    JBC - Your Partner in Global Sourcing Solutions
     We source from over 70 countries with more than 400 sourcing partners
   image: /img/network-map.png
 products:
@@ -32,34 +31,50 @@ products:
     their inventories at an optimal level - thereby safeguarding against
     interrupted supplies.
   categories:
-    - label: 'Protective Equipment'
+    - label: Protective Equipment
       thumbnail: /img/durian.png
-      description: Please fill me out.
+      description: |-
+        Medical and surgical masks
+        Protective clothing
+        Protective gown 
+        Face shield
+        Goggle
+        COVID -19 testing kits
+        Nitrile gloves
       images:
         - source: /img/coffee.png
-          name: 'PPE 1'
+          name: PPE 1
         - source: /img/coffee-gear.png
-          name: 'PPE 2'
+          name: PPE 2
         - source: /img/coffee.png
-          name: 'PPE 3'
-    - label: 'Seafood'
+          name: PPE 3
+    - label: Seafood
       thumbnail: /img/seafood.png
-      description: Please fill me out.
+      description: |-
+        Species
+        Battered & Breaded products
+        Salted products
+        Seasonal Products
+        Brands
+        Certifications
       images:
-        - source: /img/coffee.png
-          name: 'Seafood 1'
-        - source: /img/coffee-gear.png
-          name: 'Seafood 2'
-        - source: /img/coffee.png
-          name: 'Seafood 3'
-    - label: 'Durian'
+        - source: /img/alaska-pollock.jpg
+          name: Seafood 1
+        - source: /img/3.-seafood-.jpg
+          name: Seafood 2
+        - source: /img/2.-salmon-croquette.jpg
+          name: Seafood 3
+    - label: Durian
       thumbnail: /img/durian.png
-      description: Please fill me out.
+      description: |-
+        Fresh
+        Frozen
+        Durian paste
       images:
-        - source: /img/coffee.png
-          name: 'Durian 1'
-        - source: /img/coffee-gear.png
-          name: 'Durian 2'
-        - source: /img/coffee.png
-          name: 'Durian 3'
+        - source: /img/2.1.jpeg
+          name: Durian 1
+        - source: /img/frozen-durian-photo-2.jpg
+          name: Durian 2
+        - source: /img/durian-paste.jpeg
+          name: Durian 3
 ---
