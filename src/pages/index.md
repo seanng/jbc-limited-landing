@@ -42,7 +42,7 @@ products:
         COVID -19 testing kits
         Nitrile gloves
       images:
-        - source: /img/coffee.png
+        - source: /img/2.personal-protective-equipment.jpg
           name: PPE 1
         - source: /img/coffee-gear.png
           name: PPE 2
