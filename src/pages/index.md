@@ -58,23 +58,24 @@ products:
         Brands
         Certifications
       images:
-        - source: /img/alaska-pollock.jpg
+        - source: /img/pollock.jpg
           name: Seafood 1
-        - source: /img/3.-seafood-.jpg
+        - source: /img/ready-meal.jpg
           name: Seafood 2
-        - source: /img/2.-salmon-croquette.jpg
+        - source: /img/value-added.jpg
           name: Seafood 3
     - label: Durian
       thumbnail: /img/durian.png
       description: |-
         Fresh
-        Frozen
+        Frozen durian
+        Foodlet
         Durian paste
       images:
-        - source: /img/2.1.jpeg
+        - source: /img/fresh.jpg
           name: Durian 1
-        - source: /img/frozen-durian-photo-2.jpg
+        - source: /img/frozen.jpg
           name: Durian 2
-        - source: /img/durian-paste.jpeg
+        - source: /img/durian-paste.jpg
           name: Durian 3
 ---
