@@ -22,7 +22,7 @@ network:
   title: Our Network
   description: |
     We source from over 70 countries with more than 400 sourcing partners
-  image: /img/network-map.png
+  image: /img/our-network-copy.png
 products:
   title: Our Products
   description: One of our key strengths is our unique ability to help customers
