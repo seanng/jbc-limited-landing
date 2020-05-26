@@ -74,7 +74,7 @@ products:
       images:
         - source: /img/fresh.jpg
           name: Durian 1
-        - source: /img/frozen.jpg
+        - source: /img/foodlet.jpg
           name: Durian 2
         - source: /img/durian-paste.jpg
           name: Durian 3
