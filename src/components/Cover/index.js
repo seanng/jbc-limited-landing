@@ -4,23 +4,17 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
-import CoverVideo from '../../assets/video/cover.mp4'
 
-export default function Cover({ title, subheading }) {
+export default function Cover({ title, subheading, image }) {
   return (
     <div
       className="index-cover-container"
+      style={{
+        backgroundImage: `url(${
+          image.childImageSharp ? image.childImageSharp.fluid.src : image
+        })`,
+      }}
     >
-      <div className="index-cover-video-container">
-        <video autoPlay loop muted className="index-cover-video-bg">
-          <source
-            type="video/mp4"
-            alt="HTML5 background video"
-            src={CoverVideo}
-          />
-        </video>
-      </div>
-
       <Container>
         <Row>
           <Col>
