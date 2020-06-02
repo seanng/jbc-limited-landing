@@ -21,9 +21,8 @@ about:
 network:
   title: Our Network
   description: |
-    JBC - Your Partner in Global Sourcing Solutions
     We source from over 70 countries with more than 400 sourcing partners
-  image: /img/network-map.png
+  image: /img/our-network-copy.png
 products:
   title: Our Products
   description: One of our key strengths is our unique ability to help customers
@@ -32,34 +31,51 @@ products:
     their inventories at an optimal level - thereby safeguarding against
     interrupted supplies.
   categories:
-    - label: 'Protective Equipment'
+    - label: Protective Equipment
       thumbnail: /img/durian.png
-      description: Please fill me out.
+      description: |-
+        Medical and surgical masks
+        Protective clothing
+        Protective gown 
+        Face shield
+        Goggle
+        COVID -19 testing kits
+        Nitrile gloves
       images:
-        - source: /img/coffee.png
-          name: 'PPE 1'
+        - source: /img/2.personal-protective-equipment.jpg
+          name: PPE 1
         - source: /img/coffee-gear.png
-          name: 'PPE 2'
+          name: PPE 2
         - source: /img/coffee.png
-          name: 'PPE 3'
-    - label: 'Seafood'
+          name: PPE 3
+    - label: Seafood
       thumbnail: /img/seafood.png
-      description: Please fill me out.
+      description: |-
+        Species
+        Battered & Breaded products
+        Salted products
+        Seasonal Products
+        Brands
+        Certifications
       images:
-        - source: /img/coffee.png
-          name: 'Seafood 1'
-        - source: /img/coffee-gear.png
-          name: 'Seafood 2'
-        - source: /img/coffee.png
-          name: 'Seafood 3'
-    - label: 'Durian'
+        - source: /img/pollock.jpg
+          name: Seafood 1
+        - source: /img/ready-meal.jpg
+          name: Seafood 2
+        - source: /img/value-added.jpg
+          name: Seafood 3
+    - label: Durian
       thumbnail: /img/durian.png
-      description: Please fill me out.
+      description: |-
+        Fresh
+        Frozen durian
+        Foodlet
+        Durian paste
       images:
-        - source: /img/coffee.png
-          name: 'Durian 1'
-        - source: /img/coffee-gear.png
-          name: 'Durian 2'
-        - source: /img/coffee.png
-          name: 'Durian 3'
+        - source: /img/fresh.jpg
+          name: Durian 1
+        - source: /img/foodlet.jpg
+          name: Durian 2
+        - source: /img/durian-paste.jpg
+          name: Durian 3
 ---
