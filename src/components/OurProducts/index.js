@@ -8,6 +8,7 @@ import TabPane from 'react-bootstrap/TabPane';
 import Carousel from 'react-bootstrap/Carousel';
 import Nav from 'react-bootstrap/Nav';
 import PreviewCompatibleImage from '../PreviewCompatibleImage';
+import data from './data';
 
 export default function OurProducts({ title, description, categories = [] }) {
   return (
@@ -50,17 +51,22 @@ export default function OurProducts({ title, description, categories = [] }) {
                 className="index-product-tab-pane"
               >
                 <Row>
-                  <Col>
+                  <Col xs={12} sm={5}>
                     <Carousel controls={false}>
                       {images.map(({ source, name }) => (
-                        <Carousel.Item key={name}>
+                        <Carousel.Item key={name} className="index-product-carousel-img">
                           <PreviewCompatibleImage imageInfo={source} />
                         </Carousel.Item>
                       ))}
                     </Carousel>
                   </Col>
-                  <Col>
-                    <p className="prewrap text-grey">{desc}</p>
+                  <Col xs={12} sm={7}>
+                    <ul>
+                      { data[label].map(subcat => (
+                        <li key={subcat.label}>{subcat.label}</li>
+                      )) }
+                    </ul>
+                    {/* <p className="prewrap text-grey">{desc}</p> */}
                   </Col>
                 </Row>
               </TabPane>
