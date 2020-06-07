@@ -1,13 +1,12 @@
 import Modal from 'react-bootstrap/Modal'
 import React from 'react'
+import ModalHeader from './ModalHeader'
 
-export default function FreshDurianModal () {
+export default function FreshDurianModal ({hide}) {
   return (
-    <>
-      <Modal.Header closeButton />
-      <Modal.Body>
-        fresh durianssss
-      </Modal.Body>
-    </>
+    <Modal.Body>
+      <ModalHeader hide={hide} />
+      FreshDurian
+    </Modal.Body>
   )
 }

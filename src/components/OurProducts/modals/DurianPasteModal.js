@@ -2,11 +2,11 @@ import Modal from 'react-bootstrap/Modal'
 import React from 'react'
 import ModalHeader from './ModalHeader'
 
-export default function FoodletModal ({hide}) {
+export default function DurianPasteModal ({hide}) {
   return (
     <Modal.Body>
       <ModalHeader hide={hide} />
-      Foodlet
+      Durian Paste
     </Modal.Body>
   )
 }

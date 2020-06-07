@@ -1,6 +1,7 @@
 import FreshDurianModal from './modals/FreshDurianModal'
 import FrozenDurianModal from './modals/FrozenDurianModal'
 import FoodletModal from './modals/FoodletModal'
+import DurianPasteModal from './modals/DurianPasteModal'
 
 export default {
   "Protective Equipment": [
@@ -70,7 +71,7 @@ export default {
     },
     {
       label: 'Durian Paste',
-      Component: '<>durian paste</>'
+      Component: DurianPasteModal
     },
   ],
 }
