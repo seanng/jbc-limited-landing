@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <BsNavbar bg="white" fixed="top" collapseOnSelect expand="lg">
       <Container>
-        <BsNavbar.Brand href="">
+        <BsNavbar.Brand href="/">
           <img src={logo} alt="Kaldi" style={{ width: '120px' }} />
         </BsNavbar.Brand>
         <BsNavbar.Toggle aria-controls="responsive-navbar-nav" />
