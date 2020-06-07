@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { navigate } from "gatsby"
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal'
@@ -10,19 +10,20 @@ import TabPane from 'react-bootstrap/TabPane';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import Nav from 'react-bootstrap/Nav';
-import FreshDurianModal from './modals/FreshDurianModal'
 import PreviewCompatibleImage from '../PreviewCompatibleImage';
 import data from './data';
 
 export default function OurProducts({ title, description, categories = [] }) {
   const [isModalShown, setIsModalShown] = useState(false)
-  const [ModalContent, setModalContent] = useState(FreshDurianModal)
+  const [ModalContent, setModalContent] = useState(null)
+
+  const hide = useCallback(() => setIsModalShown(false), [])
 
   const handleSubcatLabelClick = (subcat) => () => {
     if (subcat.page) {
       navigate(subcat.page)
     } else if (subcat.Component) {
-      setModalContent(() => <subcat.Component hide={() => setIsModalShown(false) } />)
+      setModalContent(() => <subcat.Component hide={hide} />)
       setIsModalShown(true)
     }
   }
@@ -89,7 +90,7 @@ export default function OurProducts({ title, description, categories = [] }) {
           </TabContent>
         </TabContainer>
       </Container>
-      <Modal show={isModalShown} onHide={() => setIsModalShown(false)} size="lg">
+      <Modal show={isModalShown} onHide={hide} size="lg">
         {ModalContent}
       </Modal>
     </section>
