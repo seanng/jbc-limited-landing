@@ -1,3 +1,7 @@
+import FreshDurianModal from './modals/FreshDurianModal'
+import FrozenDurianModal from './modals/FrozenDurianModal'
+import FoodletModal from './modals/FoodletModal'
+
 export default {
   "Protective Equipment": [
     {
@@ -54,19 +58,19 @@ export default {
   "Durian": [
     {
       label: 'Fresh durian',
-      Component: '<></>'
+      Component: FreshDurianModal
     },
     {
       label: 'Frozen durian',
-      Component: '<></>'
+      Component: FrozenDurianModal,
     },
     {
       label: 'Foodlet',
-      Component: '<></>'
+      Component: FoodletModal,
     },
     {
       label: 'Durian Paste',
-      Component: '<></>'
+      Component: '<>durian paste</>'
     },
   ],
 }

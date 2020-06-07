@@ -1,16 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { navigate } from "gatsby"
 import Container from 'react-bootstrap/Container';
+import Modal from 'react-bootstrap/Modal'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import TabContainer from 'react-bootstrap/TabContainer';
 import TabContent from 'react-bootstrap/TabContent';
 import TabPane from 'react-bootstrap/TabPane';
+import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import Nav from 'react-bootstrap/Nav';
+import FreshDurianModal from './modals/FreshDurianModal'
 import PreviewCompatibleImage from '../PreviewCompatibleImage';
 import data from './data';
 
 export default function OurProducts({ title, description, categories = [] }) {
+  const [isModalShown, setIsModalShown] = useState(false)
+  const [ModalContent, setModalContent] = useState(FreshDurianModal)
+
+  const handleSubcatLabelClick = (subcat) => () => {
+    if (subcat.page) {
+      navigate(subcat.page)
+    } else if (subcat.Component) {
+      setModalContent(() => <subcat.Component hide={() => setIsModalShown(false) } />)
+      setIsModalShown(true)
+    }
+  }
+
   return (
     <section id="products">
       <Container>
@@ -44,7 +60,7 @@ export default function OurProducts({ title, description, categories = [] }) {
             </Col>
           </Row>
           <TabContent>
-            {categories.map(({ description: desc, label, images }, idx) => (
+            {categories.map(({ label, images }, idx) => (
               <TabPane
                 key={label}
                 eventKey={idx}
@@ -60,13 +76,12 @@ export default function OurProducts({ title, description, categories = [] }) {
                       ))}
                     </Carousel>
                   </Col>
-                  <Col xs={12} sm={7}>
-                    <ul>
-                      { data[label].map(subcat => (
-                        <li key={subcat.label}>{subcat.label}</li>
-                      )) }
-                    </ul>
-                    {/* <p className="prewrap text-grey">{desc}</p> */}
+                  <Col xs={12} sm={{ span: 6, offset: 1}}>
+                    { data[label].map(subcat => (
+                      <div key={subcat.label}>
+                        <Button className="index-product-subcat-label" onClick={handleSubcatLabelClick(subcat)} variant="link" key={subcat.label}>{subcat.label}</Button>
+                      </div>
+                    )) }
                   </Col>
                 </Row>
               </TabPane>
@@ -74,6 +89,9 @@ export default function OurProducts({ title, description, categories = [] }) {
           </TabContent>
         </TabContainer>
       </Container>
+      <Modal show={isModalShown} onHide={() => setIsModalShown(false)} size="lg">
+        {ModalContent}
+      </Modal>
     </section>
   );
 }

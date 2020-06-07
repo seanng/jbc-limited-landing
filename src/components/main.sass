@@ -3,13 +3,14 @@ $sm: 576px
 $md: 768px
 $lg: 992px
 $xl: 1200px
+$darkgrey: #2C2E30
 $maroon: #A23958
 $navbar-height: 80px
 
 /** GLOBALS **/
 body
   font-family: "Poppins", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
-  color: #2C2E30
+  color: $darkgrey
   font-size: 1rem
   letter-spacing: 0.5px
   font-weight: 300
@@ -162,7 +163,7 @@ body
   font-weight: 300
   height: 100%
   &:focus
-    outline-color: white
+    outline: none
 
 .index-product-tab.nav-link.active
   background-color: transparent
@@ -190,6 +191,16 @@ body
 
 .index-product-carousel-img
   max-width: 485px
+
+.btn.index-product-subcat-label
+  color: $darkgrey
+  font-size: 30px
+  &:hover
+    font-weight: 600
+    text-decoration: none
+  &:focus
+    font-weight: 600
+    text-decoration: none
 
 /** INDEX-CONTACT **/
 #contact
