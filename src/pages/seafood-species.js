@@ -4,15 +4,17 @@ import React, { useState, useCallback } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 import Layout from '../components/Layout';
+import ModalHeader from '../components/ModalHeader';
 import data from '../data/seafood-species';
 
 export default function SeafoodSpecies() {
   const [isModalShown, setIsModalShown] = useState(false);
   const [content, setContent] = useState({
     map: 'map goes here',
-    images: [],
+    forms: [],
   });
 
   const hide = useCallback(() => setIsModalShown(false), []);
@@ -32,7 +34,12 @@ export default function SeafoodSpecies() {
         </Row>
         <Row>
           {data.map(item => (
-            <Col xs={12} md={6} xl={4} className="d-flex justify-content-center">
+            <Col
+              xs={12}
+              md={6}
+              xl={4}
+              className="d-flex justify-content-center"
+            >
               <div
                 onClick={handleThumbnailClick(item)}
                 className="text-white text-center pt-4 rounded mb-5"
@@ -53,12 +60,30 @@ export default function SeafoodSpecies() {
           ))}
         </Row>
       </Container>
-      <Modal show={isModalShown} onHide={hide} size="lg">
-        <div>Cutting</div>
-        {content.images.map((img, idx) => (
-          <p key={idx}>img</p>
-        ))}
-        {content.map}
+      <Modal show={isModalShown} onHide={hide} size="xl">
+        <ModalHeader hide={hide} />
+        <Modal.Body>
+          <Container>
+            <Row>
+              Product Forms
+            </Row>
+            <Row>
+            {content.forms.map((form, idx) => (
+              <Col xs={12} sm={6} xl={4} key={form.caption}>
+                <Card>
+                  <Card.Img src={form.img} />
+                  <Card.Text>{form.caption}</Card.Text>
+                </Card>
+              </Col>
+            ))}
+            </Row>
+            <Row>
+              <Col>
+                <Card.Img src={content.map} />
+              </Col>
+            </Row>
+          </Container>
+        </Modal.Body>
       </Modal>
     </Layout>
   );

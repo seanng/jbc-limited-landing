@@ -1,5 +1,5 @@
 import React from 'react'
-import closeIcon from '../../../assets/img/close.svg';
+import closeIcon from '../assets/img/close.svg';
 
 export default function ModalHeader ({ hide }) {
   return (

@@ -90,7 +90,7 @@ export default function OurProducts({ title, description, categories = [] }) {
           </TabContent>
         </TabContainer>
       </Container>
-      <Modal show={isModalShown} onHide={hide} size="lg">
+      <Modal show={isModalShown} onHide={hide} size="xl">
         {ModalContent}
       </Modal>
     </section>

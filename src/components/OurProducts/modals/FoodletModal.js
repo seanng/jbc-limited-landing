@@ -1,6 +1,6 @@
 import Modal from 'react-bootstrap/Modal'
 import React from 'react'
-import ModalHeader from './ModalHeader'
+import ModalHeader from '../../ModalHeader'
 
 export default function FoodletModal ({hide}) {
   return (

@@ -1,3 +1,4 @@
+// Thumbnails
 import AlaskaPollockThumbnail from '../assets/img/products/seafood/species/Alaska Pollock/Alaska Pollock.jpg'
 import ArrowtoothFlounderThumbnail from '../assets/img/products/seafood/species/Arrowtooth Flounder/Arrowtooth Flounder.jpg'
 import AtlanticCodThumbnail from '../assets/img/products/seafood/species/Atlantic Cod/Atlantic Cod.jpg'
@@ -14,13 +15,43 @@ import PinkSalmonChumSalmonThumbnail from '../assets/img/products/seafood/specie
 import SaitheThumbnail from '../assets/img/products/seafood/species/Saithe/Saith.jpg'
 import YellowfinSoleThumbnail from '../assets/img/products/seafood/species/Yellowfin Sole/Yellow Sole.jpg'
 
+// Alaskan Pollock
+import AlaskaPollockFillet from '../assets/img/products/seafood/species/Alaska Pollock/Alaska Pollock Fillet Block.jpg'
+import AlaskaPollockMap from '../assets/img/products/seafood/species/Alaska Pollock/Alaska Pollock Map.jpg'
+import AlaskaPollockShatterpack from '../assets/img/products/seafood/species/Alaska Pollock/Alaska Pollock Shatterpack.jpg'
+import AlaskaPollockSkinlessLoin from '../assets/img/products/seafood/species/Alaska Pollock/Alaska Pollock Skinless Loin.jpg'
+import AlaskaPollockSkinlessFilletNugget from '../assets/img/products/seafood/species/Alaska Pollock/Alaska Pollock Skinless Loin Fillet Nugget.jpg'
+import AlaskaPollockSkinOn from '../assets/img/products/seafood/species/Alaska Pollock/Alaska Pollock Skin On.jpg'
+
+
 export default [
   {
     label: 'Alaska Pollock',
     thumbnail: AlaskaPollockThumbnail,
     content: {
-      map: 'map goes here',
-      images: []
+      map: AlaskaPollockMap,
+      forms: [
+        {
+          img: AlaskaPollockFillet,
+          caption: 'IQF Fillets'
+        },
+        {
+          img: AlaskaPollockShatterpack,
+          caption: 'Interleaved/Shatterpack Blocks'
+        },
+        {
+          img: AlaskaPollockSkinlessLoin,
+          caption: 'Loin Portions 2'
+        },
+        {
+          img: AlaskaPollockSkinOn,
+          caption: 'Loin Portions'
+        },
+        {
+          img: AlaskaPollockSkinlessFilletNugget,
+          caption: 'IQF Fillets',
+        },
+      ]
     }
   },
   {
@@ -28,7 +59,7 @@ export default [
     thumbnail: ArrowtoothFlounderThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
   {
@@ -36,7 +67,7 @@ export default [
     thumbnail: AtlanticCodThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
   {
@@ -44,7 +75,7 @@ export default [
     thumbnail: AtlanticMackerelThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
   {
@@ -52,7 +83,7 @@ export default [
     thumbnail: BlackCodThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
   {
@@ -60,7 +91,7 @@ export default [
     thumbnail: ChileanSeabassThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
   {
@@ -68,7 +99,7 @@ export default [
     thumbnail: GreenlandHalibutThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
   {
@@ -76,7 +107,7 @@ export default [
     thumbnail: HaddockThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
   {
@@ -84,7 +115,7 @@ export default [
     thumbnail: KingSalmonCohoThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
   {
@@ -92,7 +123,7 @@ export default [
     thumbnail: PacificHerringThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
   {
@@ -100,7 +131,7 @@ export default [
     thumbnail: PacificSauryThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
   {
@@ -108,7 +139,7 @@ export default [
     thumbnail: PeruvianAnchovyThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
   {
@@ -116,7 +147,7 @@ export default [
     thumbnail: PinkSalmonChumSalmonThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
   {
@@ -124,7 +155,7 @@ export default [
     thumbnail: SaitheThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
   {
@@ -132,7 +163,7 @@ export default [
     thumbnail: YellowfinSoleThumbnail,
     content: {
       map: 'map goes here',
-      images: []
+      forms: []
     }
   },
 ]
