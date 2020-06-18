@@ -4,6 +4,7 @@ $md: 768px
 $lg: 992px
 $xl: 1200px
 $darkgrey: #2C2E30
+$lightgrey: #6D6D6D
 $maroon: #A23958
 $navbar-height: 80px
 
@@ -210,7 +211,7 @@ body
   padding-bottom: 72px
 
 .index-contact-submit-button
-  background-color: #6D6D6D
+  background-color: $lightgrey
   border-radius: 20px
   display: flex
   justify-content: center
@@ -219,8 +220,14 @@ body
   padding: 7px 60px
   float: right
   &:hover
-    background-color: #6D6D6D
+    background-color: $lightgrey
   &:active
-    background-color: #6D6D6D !important
+    background-color: $lightgrey !important
   &:focus
-    background-color: #6D6D6D
+    background-color: $lightgrey
+
+/** Modals **/
+.modal-title-wrapper
+  width: 300px
+  border-bottom: 4px solid $lightgrey
+  // padding-bottom: 30px

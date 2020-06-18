@@ -33,23 +33,23 @@ export default [
       forms: [
         {
           img: AlaskaPollockFillet,
-          caption: 'IQF Fillets'
+          caption: 'Fillet Blocks'
         },
         {
           img: AlaskaPollockShatterpack,
-          caption: 'Interleaved/Shatterpack Blocks'
+          caption: 'Shatterpack Blocks'
         },
         {
           img: AlaskaPollockSkinlessLoin,
-          caption: 'Loin Portions 2'
-        },
-        {
-          img: AlaskaPollockSkinOn,
           caption: 'Loin Portions'
         },
         {
+          img: AlaskaPollockSkinOn,
+          caption: 'IQF Fillets'
+        },
+        {
           img: AlaskaPollockSkinlessFilletNugget,
-          caption: 'IQF Fillets',
+          caption: 'IQF Portions',
         },
       ]
     }
