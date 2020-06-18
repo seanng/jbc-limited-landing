@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Your Partner in Global Sourcing Solutions
 image: /img/screenshot-2020-05-18-at-10.19.15-pm.png
-subheading: ''
+subheading: .
 about:
   title: About JBC
   description: >
@@ -27,9 +27,8 @@ products:
   title: Our Products
   categories:
     - label: Personal Protective Equipment
-      thumbnail: /img/durian.png
-      description: |-
-        PPE
+      thumbnail: /img/ppe.svg
+      description: PPE
       images:
         - source: /img/2.personal-protective-equipment.jpg
           name: PPE 1
@@ -38,9 +37,12 @@ products:
         - source: /img/coffee.png
           name: PPE 3
     - label: Seafood
-      thumbnail: /img/seafood.png
-      description: |-
-        One of our key strengths is our unique ability to help customers improve their inventory management. Apart from being able to offer a stable supply of seafood products, our just-in-time delivery helps customers keep their inventories at an optimal level - thereby safeguarding against interrupted supplies.
+      thumbnail: /img/seafood.svg
+      description: One of our key strengths is our unique ability to help customers
+        improve their inventory management. Apart from being able to offer a
+        stable supply of seafood products, our just-in-time delivery helps
+        customers keep their inventories at an optimal level - thereby
+        safeguarding against interrupted supplies.
       images:
         - source: /img/pollock.jpg
           name: Seafood 1
@@ -49,9 +51,8 @@ products:
         - source: /img/value-added.jpg
           name: Seafood 3
     - label: Durian
-      thumbnail: /img/durian.png
-      description: |-
-        Durian description
+      thumbnail: /img/durian.svg
+      description: Durian description
       images:
         - source: /img/fresh.jpg
           name: Durian 1
@@ -59,4 +60,5 @@ products:
           name: Durian 2
         - source: /img/durian-paste.jpg
           name: Durian 3
+  description: .
 ---
