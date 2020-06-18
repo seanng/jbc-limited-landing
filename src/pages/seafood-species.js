@@ -61,35 +61,29 @@ export default function SeafoodSpecies() {
         </Row>
       </Container>
       <Modal show={isModalShown} onHide={hide} size="xl">
-        <div className="p-4">
+        <Modal.Body>
           <ModalHeader hide={hide} />
-          <Modal.Body>
-            <Container>
-              <Row className="justify-content-center text-center pt-3 pb-3">
-                <div className="modal-title-wrapper">
-                  <h1 className="index-title">Product Forms</h1>
-                </div>
-              </Row>
-              <Row className="justify-content-center text-center">
-              {content.forms.map((form) => (
-                <Col xs={12} sm={6} xl={4} key={form.caption}>
-                  <Card className="mt-5 mb-">
-                    <Card.Img src={form.img} />
-                    <Card.Body>
-                      <Card.Text>{form.caption}</Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))}
-              </Row>
-              <Row>
-                <Col>
-                  <Card.Img src={content.map} />
-                </Col>
-              </Row>
-            </Container>
-          </Modal.Body>
-        </div>
+          <Container>
+            <Row className="justify-content-center text-center pt-3 pb-3">
+              <div className="modal-title-wrapper">
+                <h1 className="index-title">Product Forms</h1>
+              </div>
+            </Row>
+            <Row className="justify-content-center text-center">
+            {content.forms.map((form) => (
+              <Col xs={12} sm={6} xl={4} key={form.caption}>
+                <Card className="mt-5 mb-">
+                  <Card.Img src={form.img} />
+                  <Card.Body>
+                    <Card.Text>{form.caption}</Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+            </Row>
+            <Row><Col><Card.Img src={content.map} /></Col></Row>
+          </Container>
+        </Modal.Body>
       </Modal>
     </Layout>
   );

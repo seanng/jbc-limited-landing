@@ -20,7 +20,7 @@ export const IndexPageTemplate = ({
     <Cover image={image} title={title} subheading={subheading} />
     <About title={about.title} description={about.description} />
     <OurNetwork title={network.title} description={network.description} image={network.image} />
-    <OurProducts title={products.title} description={products.description} categories={products.categories} />
+    <OurProducts title={products.title} categories={products.categories} />
     <Contact />
   </div>
 );
@@ -74,7 +74,6 @@ export const pageQuery = graphql`
         }
         products {
           title
-          description
           categories {
             label
             description

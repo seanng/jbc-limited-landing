@@ -25,22 +25,11 @@ network:
   image: /img/our-network-copy.png
 products:
   title: Our Products
-  description: One of our key strengths is our unique ability to help customers
-    improve their inventory management. Apart from being able to offer a stable
-    supply of seafood products, our just-in-time delivery helps customers keep
-    their inventories at an optimal level - thereby safeguarding against
-    interrupted supplies.
   categories:
-    - label: Protective Equipment
+    - label: Personal Protective Equipment
       thumbnail: /img/durian.png
       description: |-
-        Medical and surgical masks
-        Protective clothing
-        Protective gown 
-        Face shield
-        Goggle
-        COVID -19 testing kits
-        Nitrile gloves
+        PPE
       images:
         - source: /img/2.personal-protective-equipment.jpg
           name: PPE 1
@@ -51,12 +40,7 @@ products:
     - label: Seafood
       thumbnail: /img/seafood.png
       description: |-
-        Species
-        Battered & Breaded products
-        Salted products
-        Seasonal Products
-        Brands
-        Certifications
+        One of our key strengths is our unique ability to help customers improve their inventory management. Apart from being able to offer a stable supply of seafood products, our just-in-time delivery helps customers keep their inventories at an optimal level - thereby safeguarding against interrupted supplies.
       images:
         - source: /img/pollock.jpg
           name: Seafood 1
@@ -67,10 +51,7 @@ products:
     - label: Durian
       thumbnail: /img/durian.png
       description: |-
-        Fresh
-        Frozen durian
-        Foodlet
-        Durian paste
+        Durian description
       images:
         - source: /img/fresh.jpg
           name: Durian 1

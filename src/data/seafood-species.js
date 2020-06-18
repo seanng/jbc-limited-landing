@@ -100,6 +100,11 @@ import YellowSoleSkinlessMarried from '../assets/img/products/seafood/species/Ye
 import YellowSoleWagiri from '../assets/img/products/seafood/species/Yellowfin Sole/Yellowfin Sole Wagiri.jpg';
 import YellowSoleRoll from '../assets/img/products/seafood/species/Yellowfin Sole/Yellowfin Sole Roll.jpg';
 
+import ARShrimp from '../assets/img/products/seafood/species/seasonal/Argentine Red Shrimp.jpg';
+import ARShrimpMap from '../assets/img/products/seafood/species/seasonal/Argentine Red Shrimp map.jpg';
+import RKCrab from '../assets/img/products/seafood/species/seasonal/Red King Crab.jpg';
+import RKCrabMap from '../assets/img/products/seafood/species/seasonal/Red King Crab map.jpg';
+
 export default [
   {
     label: 'Alaska Pollock',
@@ -460,6 +465,24 @@ export default [
           img: YellowSoleRoll,
           caption: 'Yellowfin Sole Roll',
         },
+      ],
+    },
+  },
+  {
+    label: 'Argentine Red Shrimp',
+    thumbnail: ARShrimp,
+    content: {
+      map: ARShrimpMap,
+      forms: [
+      ],
+    },
+  },
+  {
+    label: 'Red King Crab',
+    thumbnail: RKCrab,
+    content: {
+      map: RKCrabMap,
+      forms: [
       ],
     },
   },

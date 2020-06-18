@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { navigate } from "gatsby"
 import Container from 'react-bootstrap/Container';
-import Modal from 'react-bootstrap/Modal'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import TabContainer from 'react-bootstrap/TabContainer';
@@ -10,20 +9,21 @@ import TabPane from 'react-bootstrap/TabPane';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import Nav from 'react-bootstrap/Nav';
+import SubCatModal from './SubCatModal'
 import PreviewCompatibleImage from '../PreviewCompatibleImage';
 import data from './data';
 
 export default function OurProducts({ title, description, categories = [] }) {
   const [isModalShown, setIsModalShown] = useState(false)
-  const [ModalContent, setModalContent] = useState(null)
+  const [modalData, setModalData] = useState([])
 
   const hide = useCallback(() => setIsModalShown(false), [])
 
   const handleSubcatLabelClick = (subcat) => () => {
     if (subcat.page) {
       navigate(subcat.page)
-    } else if (subcat.Component) {
-      setModalContent(() => <subcat.Component hide={hide} />)
+    } else {
+      setModalData(subcat.data)
       setIsModalShown(true)
     }
   }
@@ -34,7 +34,6 @@ export default function OurProducts({ title, description, categories = [] }) {
         <Row className="index-product-introduction">
           <Col>
             <h1 className="index-title">{title}</h1>
-            <p className="prewrap text-justify text-grey">{description}</p>
           </Col>
         </Row>
         <TabContainer
@@ -61,12 +60,17 @@ export default function OurProducts({ title, description, categories = [] }) {
             </Col>
           </Row>
           <TabContent>
-            {categories.map(({ label, images }, idx) => (
+            {categories.map(({ label, images, description: desc }, idx) => (
               <TabPane
                 key={label}
                 eventKey={idx}
                 className="index-product-tab-pane"
               >
+                <Row>
+                  <Col xs={12}>
+                    <p className="prewrap text-justify text-grey pb-5">{desc}</p>
+                  </Col>
+                </Row>
                 <Row>
                   <Col xs={12} sm={5}>
                     <Carousel controls={false}>
@@ -90,9 +94,7 @@ export default function OurProducts({ title, description, categories = [] }) {
           </TabContent>
         </TabContainer>
       </Container>
-      <Modal show={isModalShown} onHide={hide} size="xl">
-        {ModalContent}
-      </Modal>
+      <SubCatModal show={isModalShown} onHide={hide} data={modalData} />
     </section>
   );
 }
