@@ -13,7 +13,7 @@ import SubCatModal from './SubCatModal'
 import PreviewCompatibleImage from '../PreviewCompatibleImage';
 import data from './data';
 
-export default function OurProducts({ title, description, categories = [] }) {
+export default function OurProducts({ title, categories = [] }) {
   const [isModalShown, setIsModalShown] = useState(false)
   const [modalData, setModalData] = useState([])
 

@@ -60,5 +60,4 @@ products:
           name: Durian 2
         - source: /img/durian-paste.jpg
           name: Durian 3
-  description: .
 ---

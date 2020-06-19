@@ -53,7 +53,7 @@ collections:
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
-          - { label: Subheading, name: subheading, widget: string }
+          - { label: Subheading, name: subheading, widget: string, required: false }
           - {
               label: About,
               name: about,
@@ -82,7 +82,6 @@ collections:
               fields:
                 [
                   { label: Title, name: title, widget: string },
-                  { label: Description, name: description, widget: text },
                   {
                     label: Categories,
                     name: categories,

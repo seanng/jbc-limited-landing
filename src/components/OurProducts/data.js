@@ -42,6 +42,7 @@ export default {
   'Personal Protective Equipment': [
     {
       label: 'Medical and surgical masks',
+      description: '',
       data: [
         {
           img: KN95,
@@ -63,6 +64,7 @@ export default {
     },
     {
       label: 'Protective wear',
+      description: '',
       data: [
         {
           img: DisposableProtectiveClothing,
@@ -84,6 +86,7 @@ export default {
     },
     {
       label: 'Other Items',
+      description: '',
       data: [
         {
           img: ElectrostaticBackpackSprayer,
@@ -112,6 +115,7 @@ export default {
     },
     {
       label: 'Battered & breaded products',
+      description: '',
       data: [
         {
           img: BreadedFillet,
@@ -141,6 +145,7 @@ export default {
     },
     {
       label: 'Salted products',
+      description: '',
       data: [
         {
           img: APSaltedFillet,
@@ -176,6 +181,7 @@ export default {
   Durian: [
     {
       label: 'Fresh durian',
+      description: 'Air Flown In From Malaysia \nAvailable During Season',
       data: [
         {
           img: FreshDurian1,
@@ -205,6 +211,7 @@ export default {
     },
     {
       label: 'Frozen durian',
+      description: '',
       data: [
         {
           img: FrozenDurian1,
@@ -221,24 +228,18 @@ export default {
       ],
     },
     {
-      label: 'Foodlet',
+      label: 'Fruitlet',
+      description: 'Conveniently Packed Without The Shell\nAvailable Year Round',
       data: [
         {
-          img: Foodlet1,
-          caption: 'Foodlet1',
-        },
-        {
-          img: Foodlet2,
-          caption: 'Foodlet2',
-        },
-        {
           img: Foodlet3,
-          caption: 'Foodlet3',
+          caption: 'Frozen Durian Fruitlet',
         },
       ],
     },
     {
       label: 'Durian Paste',
+      description: 'Multipurpose Use As Ingredient For Ice Cream, Desserts and Pastry',
       data: [
         {
           img: DurianPaste,
