@@ -114,23 +114,23 @@ export default [
       forms: [
         {
           img: AlaskaPollockFillet,
-          caption: 'Fillet Blocks',
+          caption: 'Fillet Block',
         },
         {
           img: AlaskaPollockShatterpack,
-          caption: 'Shatterpack Blocks',
+          caption: 'Shatterpack',
         },
         {
           img: AlaskaPollockSkinlessLoin,
-          caption: 'Loin Portions',
+          caption: 'Skinless Loin',
         },
         {
           img: AlaskaPollockSkinOn,
-          caption: 'IQF Fillets',
+          caption: 'Skin On Fillet, Kosher Fillet, J-Cut Fillet, V-Cut Fillet (L-R)',
         },
         {
           img: AlaskaPollockSkinlessFilletNugget,
-          caption: 'IQF Portions',
+          caption: 'Skinless Loin, Skinless Fillet, Skinless Nugget,Skinless Tail Portion (L-R)',
         },
       ],
     },
@@ -184,17 +184,17 @@ export default [
         },
         {
           img: AtlanticCodSkinlessPortion,
-          caption: 'Cod Skinless Tail Portion, Portion, Nugget',
+          caption: 'Skinless Tail Portion, Portion, Nugget (L-R)',
         },
         {
           img: AtlanticCodSkinOn,
           caption:
-            '(Top) Skin On Atlantic Cod Fillet \n(Bottom) Skin On Pacific Cod Fillet',
+            'Top: Skin On Atlantic Cod Fillet \nBottom: Skin On Pacific Cod Fillet',
         },
         {
           img: AtlanticCodSkinless,
           caption:
-            '(Top) Skinless Atlantic Cod Fillet \n(Bottom) Skinless Pacific Cod Fillet',
+            'Top: Skinless Atlantic Cod Fillet \nBottom: Skinless Pacific Cod Fillet',
         },
       ],
     },
@@ -220,23 +220,23 @@ export default [
       forms: [
         {
           img: BlackCodHnG,
-          caption: 'Black Cod Headed and Gutted',
+          caption: 'Headed and Gutted',
         },
         {
           img: BlackCodKirimi,
-          caption: 'Black Cod Kirimi',
+          caption: 'Kirimi',
         },
         {
           img: BlackCodSteak,
-          caption: 'Black Cod Steak',
+          caption: 'Steak',
         },
         {
           img: BlackCodSkinOnFillet,
-          caption: 'Black Cod Skin On Fillet',
+          caption: 'Skin On Fillet',
         },
         {
           img: BlackCodSkinOnPortion,
-          caption: 'Black Cod Skin On Portion',
+          caption: 'Skin On Portion',
         },
       ],
     },
@@ -249,23 +249,23 @@ export default [
       forms: [
         {
           img: ChileanSeabassHnG,
-          caption: 'Chilean Seabass Headed and Gutted',
+          caption: 'Headed and Gutted',
         },
         {
           img: ChileanSeabassKirimi,
-          caption: 'Chilean Seabass Kirimi',
+          caption: 'Kirimi',
         },
         {
           img: ChileanSeabassSkinOn,
-          caption: 'Chilean Seabass Skin On Pin Bone In Fillet',
+          caption: 'Skin On Pin Bone In Fillet',
         },
         {
           img: ChileanSeabassSkinlessPortion,
-          caption: 'Chilean Seabass Skinless Portion',
+          caption: 'Skinless Portion',
         },
         {
           img: ChileanSeabassSteak,
-          caption: 'Chilean Seabass Steak',
+          caption: 'Steak',
         },
       ],
     },
@@ -278,31 +278,31 @@ export default [
       forms: [
         {
           img: GreenlandHalibutKirimi,
-          caption: 'Greenland Halibut Kirimi',
+          caption: 'Kirimi',
         },
         {
           img: GreenlandHalibutWagiri,
-          caption: 'Greenland Halibut Wagiri',
+          caption: 'Wagiri',
         },
         {
           img: GreenlandHalibutFrill,
-          caption: 'Greenland Halibut Frill',
+          caption: 'Frill',
         },
         {
           img: GreenlandHalibutTrimmedSteak,
-          caption: 'Greenland Halibut Trimmed Steak',
+          caption: 'Trimmed Steak',
         },
         {
           img: GreenlandHalibutThumbnail,
-          caption: 'Greenland Halibut Trimmed Headed and Gutted',
+          caption: 'Trimmed Headed and Gutted',
         },
         {
           img: GreenlandHalibutSkinlessPin,
-          caption: 'Greenland Halibut Skinless Pin Bone Out Fillet',
+          caption: 'Skinless Pin Bone Out Fillet',
         },
         {
           img: GreenlandHalibutSkinlessPortion,
-          caption: 'Greenland Halibut Skinless Portion',
+          caption: 'Skinless Portion',
         },
       ],
     },
@@ -315,25 +315,25 @@ export default [
       forms: [
         {
           img: HaddockSkinOn,
-          caption: 'Haddock Skin On J-Cut Fillet, Skinless V-Cut Fillet, Skinless J-Cut Fillet',
+          caption: 'Skin On J-Cut Fillet, Skinless V-Cut Fillet, Skinless J-Cut Fillet (Top-Bottom)',
         },
         {
           img: HaddockSkinlessPortion,
-          caption: 'Haddock Skinless Portion, Skinless Diamond Cut Portion, Skinless Loin (L-R)',
+          caption: 'Skinless Portion, Skinless Diamond Cut Portion, Skinless Loin (L-R)',
         },
         {
           img: HaddockSkinlessSkinOnTail,
-          caption: 'Haddock Skinless and Skin On Tail',
+          caption: 'Skinless and Skin On Tail',
         },
         {
           img: HaddockFilletBlock,
-          caption: 'Haddock Fillet Block',
+          caption: 'Fillet Block',
         },
       ],
     },
   },
   {
-    label: 'King Salmon Coho Salmon',
+    label: 'King Salmon / Coho Salmon',
     thumbnail: KingSalmonCohoThumbnail,
     content: {
       map: CohoMap,
@@ -348,7 +348,7 @@ export default [
         },
         {
           img: CohoSkinless,
-          caption: 'Salmon Skinless Fat Line In Portion',
+          caption: 'Skinless Fat Line In Portion',
         },
         {
           img: KingSalmonSteak,
@@ -422,19 +422,19 @@ export default [
       forms: [
         {
           img: SaitheDeepSkinnedFillet,
-          caption: 'Skinless, Deep Skinned Fillet',
+          caption: 'Skinless / Deep Skinned Fillet',
         },
         {
           img: SaitheDeepSkinnedLoin,
-          caption: 'Skinless, Deep Skinned Loin',
+          caption: 'Skinless / Deep Skinned Loin',
         },
         {
           img: SaitheDeepSkinnedTail,
-          caption: 'Skinless, Deep Skinned Tail Portion',
+          caption: 'Skinless / Deep Skinned Tail Portion',
         },
         {
           img: SaitheDeepSkinnedCentre,
-          caption: 'Skinless, Deep Skinned Centre Portion',
+          caption: 'Skinless / Deep Skinned Centre Portion',
         },
       ],
     },
@@ -447,23 +447,23 @@ export default [
       forms: [
         {
           img: YellowSoleFilletBlock,
-          caption: 'Yellowfin Sole Fillet Block',
+          caption: 'Fillet Block',
         },
         {
           img: YellowSoleSkinlessFillet,
-          caption: 'Yellowfin Sole Skinless Fillet',
+          caption: 'Skinless Fillet',
         },
         {
           img: YellowSoleSkinlessMarried,
-          caption: 'Yellowfin Sole Skinless Married Fillet',
+          caption: 'Skinless Married Fillet',
         },
         {
           img: YellowSoleWagiri,
-          caption: 'Yellowfin Sole Wagiri',
+          caption: 'Wagiri',
         },
         {
           img: YellowSoleRoll,
-          caption: 'Yellowfin Sole Roll',
+          caption: 'Roll',
         },
       ],
     },
