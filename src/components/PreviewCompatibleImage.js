@@ -1,8 +1,17 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-const PreviewCompatibleImage = ({ imageInfo, width = '100%' }) => {
-  const imageStyle = { width, borderRadius: '5px' }
+const DEFAULT_IMAGE_STYLE = {
+  width: '100%',
+  height: '100%',
+  borderRadius: '5px'
+}
+
+const PreviewCompatibleImage = ({ imageInfo, styles = {} }) => {
+  const imageStyle = {
+    ...DEFAULT_IMAGE_STYLE,
+    ...styles
+  }
   const { alt = '', childImageSharp, image, url } = imageInfo
 
   if (!!image && !!image.childImageSharp) {

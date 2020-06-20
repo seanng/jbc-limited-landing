@@ -55,7 +55,9 @@ export default function OurProducts({ title, categories = [] }) {
                     <Nav.Link className="index-product-tab" eventKey={idx}>
                       <div className="index-product-tab-thumbnail-wrapper">
                         <PreviewCompatibleImage
-                          width="80%"
+                          style={{
+                            width: '80%',
+                          }}
                           imageInfo={thumbnail}
                         />
                       </div>
@@ -88,7 +90,7 @@ export default function OurProducts({ title, categories = [] }) {
                           key={name}
                           className="index-product-carousel-img"
                         >
-                          <PreviewCompatibleImage imageInfo={source} />
+                          <PreviewCompatibleImage styles={{ height: 338, objectFit: 'cover' }} imageInfo={source} />
                         </Carousel.Item>
                       ))}
                     </Carousel>
