@@ -12,16 +12,11 @@ import MedicalPowderFree from '../../assets/img/products/ppe/Medical, Powder fre
 import DisposableProtectiveClothing from '../../assets/img/products/ppe/Medical Disposable Protective Clothing with hood.png';
 
 import FreshDurian1 from '../../assets/img/products/durian/Fresh/1.jpg';
-import FreshDurian2 from '../../assets/img/products/durian/Fresh/2.1.jpeg';
-import FreshDurian22 from '../../assets/img/products/durian/Fresh/2.2.jpg';
-import FreshDurian3 from '../../assets/img/products/durian/Fresh/3.jpg';
 import FreshDurian4 from '../../assets/img/products/durian/Fresh/4.jpg';
 import FreshDurian5 from '../../assets/img/products/durian/Fresh/5.jpeg';
-import FrozenDurian1 from '../../assets/img/products/durian/Frozen/FrozenDurian1.jpg';
-import FrozenDurian2 from '../../assets/img/products/durian/Frozen/FrozenDurian2.jpg';
+import FrozenDurian1 from '../../assets/img/products/durian/Frozen/Frozen Whole Durian.jpg';
+import FrozenDurian2 from '../../assets/img/products/durian/Frozen/Vacuum Packed Frozen Durian.jpg';
 import DurianPaste from '../../assets/img/products/durian/Durian paste/Durian Paste.jpeg';
-import Foodlet1 from '../../assets/img/products/durian/foodlet/foodlet1.jpg';
-import Foodlet2 from '../../assets/img/products/durian/foodlet/foodlet2.jpg';
 import Foodlet3 from '../../assets/img/products/durian/foodlet/foodlet3.jpg';
 
 import BreadedFillet from '../../assets/img/products/seafood/bnb/Breaded Fillet.jpg';
@@ -38,23 +33,32 @@ import ACSplitFillet from '../../assets/img/products/seafood/salted/Atlantic Cod
 import ACLightlyFillet from '../../assets/img/products/seafood/salted/Atlantic Cod Lightly Salted Fillet.jpg';
 import ACLightlyPortion from '../../assets/img/products/seafood/salted/Atlantic Cod Lightly Salted Portion.jpg';
 
+import ProtectiveWearModal from './modals/ProtectiveWear'
+import MasksModal from './modals/Masks'
+import OtherItemsModal from './modals/OtherItems'
+import FreshDurianModal from './modals/FreshDurian'
+import FrozenDurianModal from './modals/FrozenDurian'
+import FruitletDurianModal from './modals/FruitletDurian'
+import DurianPasteModal from './modals/DurianPaste'
+
 export default {
   'Personal Protective Equipment': [
     {
       label: 'Medical and surgical masks',
       description: '',
+      Component: MasksModal,
       data: [
         {
           img: KN95,
-          caption: 'KN95 Mask',
+          caption: 'KN95 Mask (NIOSH or Non-NIOSH Approved)',
         },
         {
           img: N99,
-          caption: 'N99 NIOSH-Approved',
+          caption: 'N99 Respirator\nNIOSH-Approved',
         },
         {
           img: N95,
-          caption: 'N95 NIOSH-Approved',
+          caption: 'N95 Respirator\nNIOSH-Approved',
         },
         {
           img: SurgicalMask,
@@ -64,6 +68,7 @@ export default {
     },
     {
       label: 'Protective wear',
+      Component: ProtectiveWearModal,
       description: '',
       data: [
         {
@@ -86,6 +91,7 @@ export default {
     },
     {
       label: 'Other Items',
+      Component: OtherItemsModal,
       description: '',
       data: [
         {
@@ -173,63 +179,46 @@ export default {
         },
       ],
     },
-    {
-      label: 'Brands',
-      Component: '<></>',
-    },
   ],
   Durian: [
     {
       label: 'Fresh durian',
-      description: 'Air Flown In From Malaysia \nAvailable During Season',
+      Component: FreshDurianModal,
+      description: 'Fresh durians flown in from Malaysia on a weekly basis when the fruit is in season. \n\nMalaysian durians are harvested only when they are ripe and fall from the trees unlike Thai durians which are plucked from the trees and ripen in the cargo containers on the journey to its final destination. \n\nWe offer popular species such as Musang King, D24, XO, D13, and D101 as well as highly sought after species such as Black Thorn and Red Prawn when in season.',
       data: [
         {
           img: FreshDurian1,
-          caption: 'Fresh Durian 1',
-        },
-        {
-          img: FreshDurian2,
-          caption: 'Fresh Durian 2',
-        },
-        {
-          img: FreshDurian22,
-          caption: 'Fresh Durian 2.2',
-        },
-        {
-          img: FreshDurian3,
-          caption: 'Fresh Durian 3',
+          caption: 'D197 AA - Musang King',
         },
         {
           img: FreshDurian4,
-          caption: 'Fresh Durian 4',
+          caption: 'D97 AA - Musang King and D24 Sultan',
         },
         {
           img: FreshDurian5,
-          caption: 'Fresh Durian 5',
+          caption: 'D24 Sultan',
         },
       ],
     },
     {
       label: 'Frozen durian',
-      description: '',
+      Component: FrozenDurianModal,
+      description: 'Enjoy durian all year round, even when the fruit is not in season. \n\nOur durian fruitlets are shelled and frozen to preserve the freshness and taste as soon as they are harvested. \n\nThe fruitlet lends well to freezing; its texture and flavor is maintained during the freezing process. \n\nPacked in 1 kg vacuum bag, the durian fruitlet can be kept in the freezer until ready for use. Just defrost and enjoy!',
       data: [
         {
           img: FrozenDurian1,
-          caption: 'Frozen Durian 1',
+          caption: 'Frozen Whole Durian',
         },
         {
           img: FrozenDurian2,
-          caption: 'Frozen Durian 2',
-        },
-        {
-          img: FrozenDurian2,
-          caption: 'Frozen Durian 2',
+          caption: 'Vacuum Packed Frozen Durian',
         },
       ],
     },
     {
       label: 'Fruitlet',
       description: 'Conveniently Packed Without The Shell\nAvailable Year Round',
+      Component: FruitletDurianModal,
       data: [
         {
           img: Foodlet3,
@@ -239,7 +228,8 @@ export default {
     },
     {
       label: 'Durian Paste',
-      description: 'Multipurpose Use As Ingredient For Ice Cream, Desserts and Pastry',
+      description: 'Durian paste is made from the flesh of the durian, without the seeds. \n\nPacked in 2 kg bags, the paste is used as a filling or flavoring for many kinds of desserts from pastries to ice cream.',
+      Component: DurianPasteModal,
       data: [
         {
           img: DurianPaste,

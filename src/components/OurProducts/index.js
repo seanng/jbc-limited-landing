@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
-import { navigate } from "gatsby"
+import { navigate } from 'gatsby';
+import Modal from 'react-bootstrap/Modal';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -9,24 +10,30 @@ import TabPane from 'react-bootstrap/TabPane';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import Nav from 'react-bootstrap/Nav';
-import SubCatModal from './SubCatModal'
+import DefaultModal from './modals/Default';
 import PreviewCompatibleImage from '../PreviewCompatibleImage';
 import data from './data';
 
 export default function OurProducts({ title, categories = [] }) {
-  const [isModalShown, setIsModalShown] = useState(false)
-  const [modalData, setModalData] = useState([])
+  const [isModalShown, setIsModalShown] = useState(false);
+  const [ModalComponent, setModalComponent] = useState(null);
 
-  const hide = useCallback(() => setIsModalShown(false), [])
+  const hide = useCallback(() => setIsModalShown(false), []);
 
-  const handleSubcatLabelClick = (subcat) => () => {
+  const handleSubcatLabelClick = subcat => () => {
     if (subcat.page) {
-      navigate(subcat.page)
+      navigate(subcat.page);
     } else {
-      setModalData(subcat.data)
-      setIsModalShown(true)
+      setModalComponent(() =>
+        subcat.Component ? (
+          <subcat.Component hide={hide} data={subcat.data} description={subcat.description} />
+        ) : (
+          <DefaultModal hide={hide} data={subcat.data} />
+        )
+      );
+      setIsModalShown(true);
     }
-  }
+  };
 
   return (
     <section id="products">
@@ -68,25 +75,37 @@ export default function OurProducts({ title, categories = [] }) {
               >
                 <Row>
                   <Col xs={12}>
-                    <p className="prewrap text-justify text-grey pb-5">{desc}</p>
+                    <p className="prewrap text-justify text-grey pb-5">
+                      {desc}
+                    </p>
                   </Col>
                 </Row>
                 <Row>
                   <Col xs={12} sm={5}>
                     <Carousel controls={false}>
                       {images.map(({ source, name }) => (
-                        <Carousel.Item key={name} className="index-product-carousel-img">
+                        <Carousel.Item
+                          key={name}
+                          className="index-product-carousel-img"
+                        >
                           <PreviewCompatibleImage imageInfo={source} />
                         </Carousel.Item>
                       ))}
                     </Carousel>
                   </Col>
-                  <Col xs={12} sm={{ span: 6, offset: 1}}>
-                    { data[label].map(subcat => (
+                  <Col xs={12} sm={{ span: 6, offset: 1 }}>
+                    {data[label].map(subcat => (
                       <div key={subcat.label}>
-                        <Button className="index-product-subcat-label" onClick={handleSubcatLabelClick(subcat)} variant="link" key={subcat.label}>{subcat.label}</Button>
+                        <Button
+                          className="index-product-subcat-label"
+                          onClick={handleSubcatLabelClick(subcat)}
+                          variant="link"
+                          key={subcat.label}
+                        >
+                          {subcat.label}
+                        </Button>
                       </div>
-                    )) }
+                    ))}
                   </Col>
                 </Row>
               </TabPane>
@@ -94,7 +113,9 @@ export default function OurProducts({ title, categories = [] }) {
           </TabContent>
         </TabContainer>
       </Container>
-      <SubCatModal show={isModalShown} onHide={hide} data={modalData} />
+      <Modal show={isModalShown} onHide={hide} size="xl">
+        {ModalComponent}
+      </Modal>
     </section>
   );
 }
