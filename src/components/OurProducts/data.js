@@ -9,7 +9,7 @@ import AlcoholHandSanitizer from '../../assets/img/products/ppe/Alcohol Hand San
 import ElectrostaticBackpackSprayer from '../../assets/img/products/ppe/Electrostatic Backpack Sprayer.jpg';
 import IsolationGown from '../../assets/img/products/ppe/Non-Surgical Isolation Gown (2).jpeg';
 import MedicalPowderFree from '../../assets/img/products/ppe/Medical, Powder free, Nitrile Examination Gloves, thickness 6 millimetre.png';
-import AlcoholWipes from '../../assets/img/products/ppe/75% Alcohol Wipes.jpeg';
+import AlcoholWipes from '../../assets/img/products/ppe/Alcohol Wipes.jpeg';
 import DisposableProtectiveClothing from '../../assets/img/products/ppe/Medical Disposable Protective Clothing with hood.png';
 
 import FreshDurian1 from '../../assets/img/products/durian/Fresh/1.jpg';
