@@ -9,6 +9,7 @@ import AlcoholHandSanitizer from '../../assets/img/products/ppe/Alcohol Hand San
 import ElectrostaticBackpackSprayer from '../../assets/img/products/ppe/Electrostatic Backpack Sprayer.jpg';
 import IsolationGown from '../../assets/img/products/ppe/Non-Surgical Isolation Gown (2).jpeg';
 import MedicalPowderFree from '../../assets/img/products/ppe/Medical, Powder free, Nitrile Examination Gloves, thickness 6 millimetre.png';
+import AlcoholWipes from '../../assets/img/products/ppe/75% Alcohol Wipes.jpeg';
 import DisposableProtectiveClothing from '../../assets/img/products/ppe/Medical Disposable Protective Clothing with hood.png';
 
 import FreshDurian1 from '../../assets/img/products/durian/Fresh/1.jpg';
@@ -111,6 +112,11 @@ export default {
           caption:
             'Medical, Powder free, Nitrile Examination Gloves, thickness 6 millimetre',
         },
+        {
+          img: AlcoholWipes,
+          caption:
+            '75% Alcohol Wipes',
+        },
       ],
     },
   ],
@@ -184,7 +190,8 @@ export default {
     {
       label: 'Fresh durian',
       Component: FreshDurianModal,
-      description: 'Fresh durians flown in from Malaysia on a weekly basis when the fruit is in season. \n\nMalaysian durians are harvested only when they are ripe and fall from the trees unlike Thai durians which are plucked from the trees and ripen in the cargo containers on the journey to its final destination. \n\nWe offer popular species such as Musang King, D24, XO, D13, and D101 as well as highly sought after species such as Black Thorn and Red Prawn when in season.',
+      description:
+        'Fresh durians flown in from Malaysia on a weekly basis when the fruit is in season. \n\nMalaysian durians are harvested only when they are ripe and fall from the trees unlike Thai durians which are plucked from the trees and ripen in the cargo containers on the journey to its final destination. \n\nWe offer popular species such as Musang King, D24, XO, D13, and D101 as well as highly sought after species such as Black Thorn and Red Prawn when in season.',
       data: [
         {
           img: FreshDurian1,
@@ -203,7 +210,8 @@ export default {
     {
       label: 'Frozen durian',
       Component: FrozenDurianModal,
-      description: 'Enjoy durian all year round, even when the fruit is not in season. \n\nOur durian fruitlets are shelled and frozen to preserve the freshness and taste as soon as they are harvested. \n\nThe fruitlet lends well to freezing; its texture and flavor is maintained during the freezing process. \n\nPacked in 1 kg vacuum bag, the durian fruitlet can be kept in the freezer until ready for use. Just defrost and enjoy!',
+      description:
+        'Enjoy durian all year round, even when the fruit is not in season. \n\nOur durian fruitlets are shelled and frozen to preserve the freshness and taste as soon as they are harvested. \n\nThe fruitlet lends well to freezing; its texture and flavor is maintained during the freezing process. \n\nPacked in 1 kg vacuum bag, the durian fruitlet can be kept in the freezer until ready for use. Just defrost and enjoy!',
       data: [
         {
           img: FrozenDurian1,
@@ -217,7 +225,8 @@ export default {
     },
     {
       label: 'Fruitlet',
-      description: 'Conveniently Packed Without The Shell\nAvailable Year Round',
+      description:
+        'Conveniently Packed Without The Shell\nAvailable Year Round',
       Component: FruitletDurianModal,
       data: [
         {
@@ -228,7 +237,8 @@ export default {
     },
     {
       label: 'Durian Paste',
-      description: 'Durian paste is made from the flesh of the durian, without the seeds. \n\nPacked in 2 kg bags, the paste is used as a filling or flavoring for many kinds of desserts from pastries to ice cream.',
+      description:
+        'Durian paste is made from the flesh of the durian, without the seeds. \n\nPacked in 2 kg bags, the paste is used as a filling or flavoring for many kinds of desserts from pastries to ice cream.',
       Component: DurianPasteModal,
       data: [
         {
