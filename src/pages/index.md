@@ -71,6 +71,6 @@ products:
           name: Durian 1
         - source: /img/foodlet.jpg
           name: Durian 2
-        - source: /img/durian-paste.jpg
+        - source: /img/durian-paste-2.jpeg
           name: Durian 3
 ---
