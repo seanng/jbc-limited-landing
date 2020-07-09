@@ -39,9 +39,9 @@ products:
       images:
         - source: /img/ppe-landing-1.jpg
           name: PPE 1
-        - source: /img/3.jpg
+        - source: /img/ppe-landing-2-.jpg
           name: PPE 2
-        - source: /img/ppe-landing-2.jpg
+        - source: /img/ppe-landing-3.jpg
           name: PPE 3
     - label: Seafood
       thumbnail: /img/seafood.png
