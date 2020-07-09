@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Your Partner in Global Sourcing Solutions
-image: /img/screenshot-2020-05-18-at-10.19.15-pm.png
+image: /img/cover-final.jpg
 subheading: ""
 about:
   title: About JBC
@@ -37,11 +37,11 @@ products:
         and that each shipment meets the regulatory requirements of the
         exporting and importing country.
       images:
-        - source: /img/2.personal-protective-equipment.jpg
+        - source: /img/ppe-landing-1.jpg
           name: PPE 1
-        - source: /img/coffee-gear.png
+        - source: /img/3.jpg
           name: PPE 2
-        - source: /img/coffee.png
+        - source: /img/ppe-landing-2.jpg
           name: PPE 3
     - label: Seafood
       thumbnail: /img/seafood.png
