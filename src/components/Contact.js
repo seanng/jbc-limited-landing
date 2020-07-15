@@ -70,6 +70,7 @@ export default function Contact() {
         </Row>
         <Form
           noValidate
+          name="contact"
           validated={isValidated}
           onSubmit={handleSubmit}
           data-netlify="true"
