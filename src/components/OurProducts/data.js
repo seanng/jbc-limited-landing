@@ -114,8 +114,7 @@ export default {
         },
         {
           img: AlcoholWipes,
-          caption:
-            '75% Alcohol Wipes',
+          caption: '75% Alcohol Wipes',
         },
       ],
     },
@@ -211,7 +210,7 @@ export default {
       label: 'Frozen durian',
       Component: FrozenDurianModal,
       description:
-        'Enjoy durian all year round, even when the fruit is not in season. \n\nOur durian fruitlets are shelled and frozen to preserve the freshness and taste as soon as they are harvested. \n\nThe fruitlet lends well to freezing; its texture and flavor is maintained during the freezing process. \n\nPacked in 1 kg vacuum bag, the durian fruitlet can be kept in the freezer until ready for use. Just defrost and enjoy!',
+        'The main season in Malaysia is from June to August with a smaller season from December to January. Now, however, with the aid of the latest freezing technology, the durians are harvest during season and frozen immediately to be enjoyed any time of the year.\n\nThe ripened durians are harvested when they fall from the trees and inspected for cracks or punctures in the shells. Only fruits with perfect outer shells are then washed and frozen in a nitrogen freezer under -100 degrees for about 1 hour. Each durian is then vacuum packed and is ready for shipment to destinations around the world. \n\nSimply defrost the durian in room temperature, remove the fruitlets from the shell and enjoy the durian out of season.',
       data: [
         {
           img: FrozenDurian1,
@@ -226,7 +225,7 @@ export default {
     {
       label: 'Fruitlet',
       description:
-        'Conveniently Packed Without The Shell\nAvailable Year Round',
+        'Enjoy durian without the inconvenience of prying open the shells. Our durian fruitlets are shelled and frozen to preserve the freshness and tastes as soon as they are harvested. The fruitlet lends well to freezing - its texture and flavour is maintained during the freezing process. Packed in 1kg vacuum bags, the durian fruitlet can be kept in the freezer to be enjoyed throughout the year.',
       Component: FruitletDurianModal,
       data: [
         {
