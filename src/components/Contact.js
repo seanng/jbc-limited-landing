@@ -86,7 +86,7 @@ export default function Contact() {
             </label>
           </div>
           <Row>
-            <Form.Group controlId="product category" as={Col} sm={12}>
+            <Form.Group as={Col} sm={12}>
               <Form.Label>Which product are you interested in?</Form.Label>
               <Form.Control
                 required
@@ -103,7 +103,7 @@ export default function Contact() {
             </Form.Group>
           </Row>
           <Row className="pt-2">
-            <Form.Group controlId="email" as={Col} sm={5}>
+            <Form.Group as={Col} sm={5}>
               <Form.Label>Email</Form.Label>
               <Form.Control
                 required
@@ -113,7 +113,7 @@ export default function Contact() {
               />
             </Form.Group>
             <Col sm={2} />
-            <Form.Group controlId="name" as={Col} sm={5}>
+            <Form.Group as={Col} sm={5}>
               <Form.Label>Name</Form.Label>
               <Form.Control
                 required
@@ -124,7 +124,7 @@ export default function Contact() {
             </Form.Group>
           </Row>
           <Row className="pt-2">
-            <Form.Group controlId="number" as={Col} sm={5}>
+            <Form.Group as={Col} sm={5}>
               <Form.Label>Phone</Form.Label>
               <Form.Control
                 name="phone"
@@ -133,7 +133,7 @@ export default function Contact() {
               />
             </Form.Group>
             <Col sm={2} />
-            <Form.Group controlId="country" as={Col} sm={5}>
+            <Form.Group as={Col} sm={5}>
               <Form.Label>Country</Form.Label>
               <Form.Control
                 name="country"
@@ -143,7 +143,7 @@ export default function Contact() {
             </Form.Group>
           </Row>
           <Row className="pt-2">
-            <Form.Group controlId="exampleForm.ControlTextarea1" as={Col}>
+            <Form.Group as={Col}>
               <Form.Label>Message</Form.Label>
               <Form.Control
                 required
