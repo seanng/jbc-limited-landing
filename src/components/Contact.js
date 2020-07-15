@@ -86,7 +86,7 @@ export default function Contact() {
             </label>
           </div>
           <Row>
-            <Form.Group controlId="name" as={Col} sm={12}>
+            <Form.Group controlId="product category" as={Col} sm={12}>
               <Form.Label>Which product are you interested in?</Form.Label>
               <Form.Control
                 required
@@ -133,7 +133,7 @@ export default function Contact() {
               />
             </Form.Group>
             <Col sm={2} />
-            <Form.Group controlId="email" as={Col} sm={5}>
+            <Form.Group controlId="country" as={Col} sm={5}>
               <Form.Label>Country</Form.Label>
               <Form.Control
                 name="country"
