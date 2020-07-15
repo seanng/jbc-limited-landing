@@ -236,14 +236,14 @@ export default {
       ],
     },
     {
-      label: 'Durian Paste',
+      label: 'Durian paste',
       description:
         'Durian paste is made from the flesh of the durian, without the seeds. \n\nPacked in 2 kg bags, the paste is used as a filling or flavoring for many kinds of desserts from pastries to ice cream.',
       Component: DurianPasteModal,
       data: [
         {
           img: DurianPaste,
-          caption: 'Durian Paste',
+          caption: 'Durian paste',
         },
       ],
     },
