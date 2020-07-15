@@ -107,7 +107,6 @@ export default function Contact() {
                 name="email"
                 onChange={handleChange}
                 type="email"
-                width="80%"
               />
             </Form.Group>
             <Col sm={2} />
@@ -128,7 +127,6 @@ export default function Contact() {
                 name="phone"
                 onChange={handleChange}
                 type="tel"
-                width="80%"
               />
             </Form.Group>
             <Col sm={2} />
@@ -137,8 +135,7 @@ export default function Contact() {
               <Form.Control
                 name="country"
                 onChange={handleChange}
-                type="email"
-                width="80%"
+                type="text"
               />
             </Form.Group>
           </Row>
