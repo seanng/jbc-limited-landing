@@ -82,27 +82,23 @@ export default function Contact() {
             </label>
           </div>
           <Row>
-            <Form.Group controlId="name" as={Col} sm={5}>
-              <Form.Label>Name</Form.Label>
+            <Form.Group controlId="name" as={Col} sm={12}>
+              <Form.Label>Which product are you interested in?</Form.Label>
               <Form.Control
                 required
-                name="name"
+                as="select"
+                name="product-category"
                 onChange={handleChange}
                 type="text"
-              />
-            </Form.Group>
-            <Col sm={2} />
-            <Form.Group controlId="number" as={Col} sm={5}>
-              <Form.Label>Phone number</Form.Label>
-              <Form.Control
-                name="number"
-                onChange={handleChange}
-                type="tel"
-                width="80%"
-              />
+              >
+                <option>Personal Protective Equipment</option>
+                <option>Seafood</option>
+                <option>Durian</option>
+                <option>Others</option>
+              </Form.Control>
             </Form.Group>
           </Row>
-          <Row>
+          <Row className="pt-2">
             <Form.Group controlId="email" as={Col} sm={5}>
               <Form.Label>Email</Form.Label>
               <Form.Control
@@ -113,9 +109,39 @@ export default function Contact() {
                 width="80%"
               />
             </Form.Group>
-            <Col />
+            <Col sm={2} />
+            <Form.Group controlId="name" as={Col} sm={5}>
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                required
+                name="name"
+                onChange={handleChange}
+                type="text"
+              />
+            </Form.Group>
           </Row>
-          <Row>
+          <Row className="pt-2">
+            <Form.Group controlId="number" as={Col} sm={5}>
+              <Form.Label>Phone</Form.Label>
+              <Form.Control
+                name="phone"
+                onChange={handleChange}
+                type="tel"
+                width="80%"
+              />
+            </Form.Group>
+            <Col sm={2} />
+            <Form.Group controlId="email" as={Col} sm={5}>
+              <Form.Label>Country</Form.Label>
+              <Form.Control
+                name="country"
+                onChange={handleChange}
+                type="email"
+                width="80%"
+              />
+            </Form.Group>
+          </Row>
+          <Row className="pt-2">
             <Form.Group controlId="exampleForm.ControlTextarea1" as={Col}>
               <Form.Label>Message</Form.Label>
               <Form.Control
