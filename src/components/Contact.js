@@ -17,7 +17,9 @@ export default function Contact() {
   const [validationMessage, setValidationMessage] = useState('');
   const [isValidationError, setIsValidationError] = useState(false)
   const [isValidated, setIsValidated] = useState(false);
-  const [val, setVal] = useState({ });
+  const [val, setVal] = useState({
+    'product-category': 'Personal Protective Equipment',
+  });
   const handleChange = e => {
     setVal({
       ...val,
@@ -27,6 +29,7 @@ export default function Contact() {
 
   const handleSubmit = async e => {
     e.preventDefault();
+    console.log('val: ', val)
     const form = e.target;
     if (!form.checkValidity()) {
       e.preventDefault();
