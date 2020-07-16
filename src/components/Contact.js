@@ -43,7 +43,7 @@ export default function Contact() {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
-          'form-name': form.getAttribute('name'),
+          'form-name': val['product-category'],
           ...val,
         }),
       });
@@ -73,7 +73,6 @@ export default function Contact() {
         </Row>
         <Form
           noValidate
-          name={val['product-category']}
           validated={isValidated}
           onSubmit={handleSubmit}
           data-netlify="true"
