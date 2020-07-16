@@ -71,11 +71,13 @@ export default function Contact() {
             </p>
           </Col>
         </Row>
+        <form data-netlify="true" name="Durian" />
+        <form data-netlify="true" name="Seafood" />
+        <form data-netlify="true" name="Others" />
         <Form
           noValidate
           validated={isValidated}
           onSubmit={handleSubmit}
-          name="Seafood"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
