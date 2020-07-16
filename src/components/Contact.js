@@ -29,7 +29,6 @@ export default function Contact() {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    console.log('val: ', val)
     const form = e.target;
     if (!form.checkValidity()) {
       e.preventDefault();
@@ -51,6 +50,7 @@ export default function Contact() {
       setIsValidationError(false);
       setValidationMessage(`Thank you for your message, ${val.name}!`);
       setIsValidated(false);
+      form.reset();
     } catch (error) {
       setIsValidationError(true);
       setValidationMessage(
