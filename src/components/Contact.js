@@ -43,7 +43,7 @@ export default function Contact() {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
-          'form-name': form.getAttribute('name'),
+          'form-name': val['product-category'],
           ...val,
         }),
       });
@@ -71,11 +71,45 @@ export default function Contact() {
             </p>
           </Col>
         </Row>
+        {/* FOR NETLIFY FORM BOTS */}
+        <div hidden>
+          <form netlify netlify-honeypot="bot-field" name="Personal Protective Equipment">
+            <input name="bot-field" />
+            <input type="text" name="product-category" />
+            <input type="email" name="email" />
+            <input type="text" name="name" />
+            <input type="tel" name="phone" />
+            <textarea name="message" />
+          </form>
+          <form netlify netlify-honeypot="bot-field" name="Seafood">
+            <input name="bot-field" />
+            <input type="text" name="product-category" />
+            <input type="email" name="email" />
+            <input type="text" name="name" />
+            <input type="tel" name="phone" />
+            <textarea name="message" />
+          </form>
+          <form netlify netlify-honeypot="bot-field" name="Durian">
+            <input name="bot-field" />
+            <input type="text" name="product-category" />
+            <input type="email" name="email" />
+            <input type="text" name="name" />
+            <input type="tel" name="phone" />
+            <textarea name="message" />
+          </form>
+          <form netlify netlify-honeypot="bot-field" name="Others">
+            <input name="bot-field" />
+            <input type="text" name="product-category" />
+            <input type="email" name="email" />
+            <input type="text" name="name" />
+            <input type="tel" name="phone" />
+            <textarea name="message" />
+          </form>
+        </div>
         <Form
           noValidate
           validated={isValidated}
           onSubmit={handleSubmit}
-          name="contact"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
