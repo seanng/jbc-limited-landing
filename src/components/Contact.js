@@ -75,6 +75,7 @@ export default function Contact() {
           noValidate
           validated={isValidated}
           onSubmit={handleSubmit}
+          name="Seafood"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
