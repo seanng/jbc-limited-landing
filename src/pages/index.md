@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Your Partner in Global Sourcing Solutions
-image: /img/cover-final.jpg
+image: /img/cover-final-copy.jpg
 subheading: ""
 about:
   title: About JBC
