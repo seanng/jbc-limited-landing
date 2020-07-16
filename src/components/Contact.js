@@ -43,7 +43,7 @@ export default function Contact() {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
-          'form-name': val['product-category'],
+          'form-name': form.getAttribute('name'),
           ...val,
         }),
       });
@@ -71,13 +71,11 @@ export default function Contact() {
             </p>
           </Col>
         </Row>
-        <form data-netlify="true" name="Durian" />
-        <form data-netlify="true" name="Seafood" />
-        <form data-netlify="true" name="Others" />
         <Form
           noValidate
           validated={isValidated}
           onSubmit={handleSubmit}
+          name="contact"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
