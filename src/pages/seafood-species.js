@@ -12,15 +12,16 @@ import data from '../data/seafood-species';
 
 export default function SeafoodSpecies() {
   const [isModalShown, setIsModalShown] = useState(false);
-  const [content, setContent] = useState({
+  const [item, setItem] = useState({
+    label: '',
+    sections: [{ content: [{}] }],
     map: 'map goes here',
-    forms: [],
   });
 
   const hide = useCallback(() => setIsModalShown(false), []);
 
-  const handleThumbnailClick = item => () => {
-    setContent(item.content);
+  const handleThumbnailClick = dataItem => () => {
+    setItem(dataItem);
     setIsModalShown(true);
   };
 
@@ -33,7 +34,7 @@ export default function SeafoodSpecies() {
           </Col>
         </Row>
         <Row>
-          {data.map(item => (
+          {data.map(dataItem => (
             <Col
               xs={12}
               md={6}
@@ -41,12 +42,12 @@ export default function SeafoodSpecies() {
               className="d-flex justify-content-center"
             >
               <div
-                onClick={handleThumbnailClick(item)}
+                onClick={handleThumbnailClick(dataItem)}
                 className="text-white text-center pt-4 rounded mb-5"
                 style={{
                   height: '320px',
                   width: '320px',
-                  backgroundImage: `url("${item.thumbnail}")`,
+                  backgroundImage: `url("${dataItem.thumbnail}")`,
                   backgroundPosition: 'center',
                   backgroundSize: 'cover',
                   fontWeight: 600,
@@ -54,7 +55,7 @@ export default function SeafoodSpecies() {
                   cursor: 'pointer',
                 }}
               >
-                {item.label}
+                {dataItem.label}
               </div>
             </Col>
           ))}
@@ -64,24 +65,42 @@ export default function SeafoodSpecies() {
         <Modal.Body>
           <ModalHeader hide={hide} />
           <Container>
-            <Row className="justify-content-center text-center pt-3 pb-3">
-              <div className="modal-title-wrapper">
-                <h1 className="index-title">Product Forms</h1>
-              </div>
-            </Row>
-            <Row className="justify-content-center text-center">
-            {content.forms.map((form) => (
-              <Col xs={12} sm={6} xl={4} key={form.caption}>
-                <Card className="mt-5 mb-">
-                  <Card.Img src={form.img} />
-                  <Card.Body>
-                    <Card.Text>{form.caption}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
+            {item.sections.map(({ content, title }) => (
+              <>
+                <Row className="justify-content-center text-center pt-3 pb-3">
+                  <div className="modal-title-wrapper mt-5">
+                    <h1 className="index-title">{title || item.label}</h1>
+                  </div>
+                </Row>
+                <Row className="justify-content-center">
+                  {content.map(form => (
+                    <Col xs={12} sm={6} xl={4} key={form.caption}>
+                      <Card className="mt-5" style={{ borderWidth: 0 }}>
+                        <Card.Img src={form.img} />
+                        {form.caption && (
+                          <Card.Body>
+                            <Card.Text
+                              style={{
+                                fontSize: 20,
+                                textAlign: 'left',
+                                whiteSpace: 'pre-line',
+                              }}
+                            >
+                              {form.caption}
+                            </Card.Text>
+                          </Card.Body>
+                        )}
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
+              </>
             ))}
+            <Row>
+              <Col>
+                <Card.Img src={item.map} />
+              </Col>
             </Row>
-            <Row><Col><Card.Img src={content.map} /></Col></Row>
           </Container>
         </Modal.Body>
       </Modal>

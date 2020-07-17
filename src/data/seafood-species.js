@@ -109,383 +109,471 @@ export default [
   {
     label: 'Alaska Pollock',
     thumbnail: AlaskaPollockThumbnail,
-    content: {
-      map: AlaskaPollockMap,
-      forms: [
-        {
-          img: AlaskaPollockFillet,
-          caption: 'Fillet Block',
-        },
-        {
-          img: AlaskaPollockShatterpack,
-          caption: 'Shatterpack',
-        },
-        {
-          img: AlaskaPollockSkinlessLoin,
-          caption: 'Skinless Loin',
-        },
-        {
-          img: AlaskaPollockSkinOn,
-          caption:
-            'Skin On Fillet, Kosher Fillet, J-Cut Fillet, V-Cut Fillet (L-R)',
-        },
-        {
-          img: AlaskaPollockSkinlessFilletNugget,
-          caption:
-            'Skinless Loin, Skinless Fillet, Skinless Nugget,Skinless Tail Portion (L-R)',
-        },
-      ],
-    },
+    map: AlaskaPollockMap,
+    sections: [
+      {
+        title: '',
+        content: [
+          {
+            img: AlaskaPollockFillet,
+            caption: 'Fillet Block',
+          },
+          {
+            img: AlaskaPollockShatterpack,
+            caption: 'Shatterpack',
+          },
+          {
+            img: AlaskaPollockSkinlessLoin,
+            caption: 'Skinless Loin',
+          },
+          {
+            img: AlaskaPollockSkinOn,
+            caption:
+              'Skin On Fillet, Kosher Fillet, J-Cut Fillet, V-Cut Fillet',
+          },
+          {
+            img: AlaskaPollockSkinlessFilletNugget,
+            caption:
+              'Skinless Loin, Skinless Fillet, Skinless Nugget, Skinless Tail Portion',
+          },
+        ],
+      },
+    ],
   },
   {
-    label: 'Atlantic/Pacific Cod',
+    label: 'Atlantic Cod / Pacific Cod',
     thumbnail: AtlanticCodThumbnail,
-    content: {
-      map: AtlanticCodMap,
-      forms: [
-        {
-          img: AtlanticCodCelloPack,
-          caption: 'Cello Pack',
-        },
-        {
-          img: AtlanticCodFilletBlock,
-          caption: 'Fillet Block',
-        },
-        {
-          img: AtlanticCodGoujon,
-          caption: 'Goujon',
-        },
-        {
-          img: AtlanticCodSkinlessPortion,
-          caption: 'Skinless Tail Portion, Portion, Nugget (L-R)',
-        },
-        {
-          img: AtlanticCodSkinOn,
-          caption:
-            'Top: Skin On Atlantic Cod Fillet \nBottom: Skin On Pacific Cod Fillet',
-        },
-        {
-          img: AtlanticCodSkinless,
-          caption:
-            'Top: Skinless Atlantic Cod Fillet \nBottom: Skinless Pacific Cod Fillet',
-        },
-      ],
-    },
+    map: AtlanticCodMap,
+    sections: [
+      {
+        content: [
+          {
+            img: AtlanticCodSkinlessPortion,
+            caption: 'Skinless Tail Portion, Portion, Nugget (L-R)',
+          },
+          {
+            img: AtlanticCodSkinOn,
+            caption:
+              'Top: Skin On Atlantic Cod Fillet\n\nBottom: Skin On Pacific Cod Fillet',
+          },
+          {
+            img: AtlanticCodSkinless,
+            caption:
+              'Top: Skinless Atlantic Cod Fillet\n\nBottom: Skinless Pacific Cod Fillet',
+          },
+          {
+            img: AtlanticCodCelloPack,
+            caption: 'Cello Pack',
+          },
+          {
+            img: AtlanticCodFilletBlock,
+            caption: 'Fillet Block',
+          },
+          {
+            img: AtlanticCodGoujon,
+            caption: 'Goujon',
+          },
+        ],
+      },
+    ],
   },
   {
-    label: 'Pink Salmon Chum Salmon',
+    label: 'Pink Salmon / Chum Salmon',
     thumbnail: PinkSalmonChumSalmonThumbnail,
-    content: {
-      map: ChumMap,
-      forms: [
-        {
-          img: FatSalmonDeepSkinned,
-          caption: '2 x 125g Deep Skinned Fat Salmon Line Out Portion',
-        },
-        {
-          img: ChumSalmonDeepSkinned,
-          caption: 'Chum Salmon, Deep Skinned Fat Line Out Loin',
-        },
-        {
-          img: ChumFillet,
-          caption: 'Chum Salmon Fillet, Skin On, Skinless Fat Line In',
-        },
-        {
-          img: ChumPortion,
-          caption: 'Pink Salmon Portion, Skin On',
-        },
-        {
-          img: PinkSalmonFillet,
-          caption: 'Pink Salmon Fillet, Skin On, Skinless Fat Line In',
-        },
-      ],
-    },
+    map: ChumMap,
+    sections: [
+      {
+        title: 'Chum Salmon',
+        content: [
+          {
+            img: FatSalmonDeepSkinned,
+            caption: `Chum Salmon Portion
+            - 2 x 125g Deep Skinned
+            - Fat Line Out
+            - Individual Vacuum Packed
+            `,
+          },
+          {
+            img: ChumSalmonDeepSkinned,
+            caption: `Chum Salmon Portion
+            - Deep Skinned
+            - Fat Line Out (Loin, center, tail)
+            `,
+          },
+          {
+            img: ChumFillet,
+            caption: `Chum Salmon Fillet
+            - Skin On
+            - Skinless Fat Line In
+            - Deep Skinned Fat Line Out`,
+          },
+        ],
+      },
+      {
+        title: 'Pink Salmon',
+        content: [
+          {
+            img: ChumPortion,
+            caption: `Pink Salmon Portion
+            - Skin On
+            - Skinless Fat Line In
+            - Deep Skinned Fat Line Out`,
+          },
+          {
+            img: PinkSalmonFillet,
+            caption: `Pink Salmon Fillet
+            - Skin On
+            - Skinless Fat Line In
+            - Deep Skinned Fat Line Out`
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Arrowtooth Flounder',
     thumbnail: ArrowtoothFlounderThumbnail,
-    content: {
-      map: ArrowtoothFlounderMap,
-      forms: [
-        {
-          img: ArrowtoothFlounderFrill,
-          caption: 'Frill',
-        },
-        {
-          img: ArrowtoothFlounderKirimi,
-          caption: 'Kirimi',
-        },
-        {
-          img: ArrowtoothFlounderWagiri,
-          caption: 'Wagiri',
-        },
-        {
-          img: ArrowtoothFlounderSkinlessFillet,
-          caption: 'Skinless Fillet',
-        },
-        {
-          img: ArrowtoothFlounderSkinlessPortion,
-          caption: 'Skinless Portion',
-        },
-      ],
-    },
+    map: ArrowtoothFlounderMap,
+    sections: [
+      {
+        content: [
+          {
+            img: ArrowtoothFlounderFrill,
+            caption: 'Frill',
+          },
+          {
+            img: ArrowtoothFlounderKirimi,
+            caption: 'Kirimi',
+          },
+          {
+            img: ArrowtoothFlounderWagiri,
+            caption: 'Wagiri',
+          },
+          {
+            img: ArrowtoothFlounderSkinlessFillet,
+            caption: 'Skinless Fillet',
+          },
+          {
+            img: ArrowtoothFlounderSkinlessPortion,
+            caption: 'Skinless Portion',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'King Salmon / Coho Salmon',
     thumbnail: KingSalmonCohoThumbnail,
-    content: {
-      map: CohoMap,
-      forms: [
-        {
-          img: CohoKirimi,
-          caption: 'King Salmon Kirimi',
-        },
-        {
-          img: CohoSkinOn,
-          caption: 'Skin On Portion (R - King Salmon, L - Coho Salmon)',
-        },
-        {
-          img: CohoSkinless,
-          caption: 'Skinless Fat Line In Portion',
-        },
-        {
-          img: KingSalmonSteak,
-          caption: 'King Salmon Steak',
-        },
-        {
-          img: CohoSteak,
-          caption: 'Coho Salmon Steak',
-        },
-      ],
-    },
+    map: CohoMap,
+    sections: [
+      {
+        title: 'King Salmon',
+        content: [
+          {
+            img: CohoKirimi,
+            caption: 'King Salmon Kirimi',
+          },
+          {
+            img: KingSalmonSteak,
+            caption: 'King Salmon Steak',
+          },
+        ],
+      },
+      {
+        title: 'Coho Salmon',
+        content: [
+          {
+            img: CohoSteak,
+            caption: 'Coho Salmon Steak',
+          },
+          {
+            img: CohoSkinOn,
+            caption: 'Skin On Portion (R - King Salmon, L - Coho Salmon)',
+          },
+          {
+            img: CohoSkinless,
+            caption: 'Skinless Fat Line In Portion',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Chilean Seabass',
     thumbnail: ChileanSeabassThumbnail,
-    content: {
-      map: ChileanSeabassMap,
-      forms: [
-        {
-          img: ChileanSeabassHnG,
-          caption: 'Headed and Gutted',
-        },
-        {
-          img: ChileanSeabassKirimi,
-          caption: 'Kirimi',
-        },
-        {
-          img: ChileanSeabassSkinOn,
-          caption: 'Skin On Pin Bone In Fillet',
-        },
-        {
-          img: ChileanSeabassSkinlessPortion,
-          caption: 'Skinless Portion',
-        },
-        {
-          img: ChileanSeabassSteak,
-          caption: 'Steak',
-        },
-      ],
-    },
+    map: ChileanSeabassMap,
+    sections: [
+      {
+        content: [
+          {
+            img: ChileanSeabassHnG,
+            caption: 'Headed and Gutted',
+          },
+          {
+            img: ChileanSeabassKirimi,
+            caption: 'Kirimi',
+          },
+          {
+            img: ChileanSeabassSkinOn,
+            caption: 'Skin On Pin Bone In Fillet',
+          },
+          {
+            img: ChileanSeabassSkinlessPortion,
+            caption: 'Skinless Portion',
+          },
+          {
+            img: ChileanSeabassSteak,
+            caption: 'Steak',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Greenland Halibut',
     thumbnail: GreenlandHalibutThumbnail,
-    content: {
-      map: GreenlandHalibutMap,
-      forms: [
-        {
-          img: GreenlandHalibutKirimi,
-          caption: 'Kirimi',
-        },
-        {
-          img: GreenlandHalibutWagiri,
-          caption: 'Wagiri',
-        },
-        {
-          img: GreenlandHalibutFrill,
-          caption: 'Frill',
-        },
-        {
-          img: GreenlandHalibutTrimmedSteak,
-          caption: 'Trimmed Steak',
-        },
-        {
-          img: GreenlandHalibutThumbnail,
-          caption: 'Trimmed Headed and Gutted',
-        },
-        {
-          img: GreenlandHalibutSkinlessPin,
-          caption: 'Skinless Pin Bone Out Fillet',
-        },
-        {
-          img: GreenlandHalibutSkinlessPortion,
-          caption: 'Skinless Portion',
-        },
-      ],
-    },
+    map: GreenlandHalibutMap,
+    sections: [
+      {
+        content: [
+          {
+            img: GreenlandHalibutKirimi,
+            caption: 'Kirimi',
+          },
+          {
+            img: GreenlandHalibutWagiri,
+            caption: 'Wagiri',
+          },
+          {
+            img: GreenlandHalibutFrill,
+            caption: 'Frill',
+          },
+          {
+            img: GreenlandHalibutTrimmedSteak,
+            caption: 'Trimmed Steak',
+          },
+          {
+            img: GreenlandHalibutThumbnail,
+            caption: 'Trimmed Headed and Gutted',
+          },
+          {
+            img: GreenlandHalibutSkinlessPin,
+            caption: 'Skinless Pin Bone Out Fillet',
+          },
+          {
+            img: GreenlandHalibutSkinlessPortion,
+            caption: 'Skinless Portion',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Black Cod',
     thumbnail: BlackCodThumbnail,
-    content: {
-      map: BlackCodMap,
-      forms: [
-        {
-          img: BlackCodHnG,
-          caption: 'Headed and Gutted',
-        },
-        {
-          img: BlackCodKirimi,
-          caption: 'Kirimi',
-        },
-        {
-          img: BlackCodSteak,
-          caption: 'Steak',
-        },
-        {
-          img: BlackCodSkinOnFillet,
-          caption: 'Skin On Fillet',
-        },
-        {
-          img: BlackCodSkinOnPortion,
-          caption: 'Skin On Portion',
-        },
-      ],
-    },
+    map: BlackCodMap,
+    sections: [
+      {
+        content: [
+          {
+            img: BlackCodHnG,
+            caption: 'Headed and Gutted',
+          },
+          {
+            img: BlackCodKirimi,
+            caption: 'Kirimi',
+          },
+          {
+            img: BlackCodSteak,
+            caption: 'Steak',
+          },
+          {
+            img: BlackCodSkinOnFillet,
+            caption: 'Skin On Fillet',
+          },
+          {
+            img: BlackCodSkinOnPortion,
+            caption: 'Skin On Portion',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Haddock',
     thumbnail: HaddockThumbnail,
-    content: {
-      map: HaddockMap,
-      forms: [
-        {
-          img: HaddockSkinOn,
-          caption:
-            'Skin On J-Cut Fillet, Skinless V-Cut Fillet, Skinless J-Cut Fillet (Top-Bottom)',
-        },
-        {
-          img: HaddockSkinlessPortion,
-          caption:
-            'Skinless Portion, Skinless Diamond Cut Portion, Skinless Loin (L-R)',
-        },
-        {
-          img: HaddockSkinlessSkinOnTail,
-          caption: 'Skinless and Skin On Tail',
-        },
-        {
-          img: HaddockFilletBlock,
-          caption: 'Fillet Block',
-        },
-      ],
-    },
+    map: HaddockMap,
+    sections: [
+      {
+        content: [
+          {
+            img: HaddockSkinOn,
+            caption:
+              'Skin On J-Cut Fillet, Skinless V-Cut Fillet, Skinless J-Cut Fillet (Top-Bottom)',
+          },
+          {
+            img: HaddockSkinlessPortion,
+            caption:
+              'Skinless Portion, Skinless Diamond Cut Portion, Skinless Loin (L-R)',
+          },
+          {
+            img: HaddockSkinlessSkinOnTail,
+            caption: 'Skinless and Skin On Tail',
+          },
+          {
+            img: HaddockFilletBlock,
+            caption: 'Fillet Block',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Saithe',
     thumbnail: SaitheThumbnail,
-    content: {
-      map: SaitheMap,
-      forms: [
-        {
-          img: SaitheDeepSkinnedFillet,
-          caption: 'Skinless / Deep Skinned Fillet',
-        },
-        {
-          img: SaitheDeepSkinnedLoin,
-          caption: 'Skinless / Deep Skinned Loin',
-        },
-        {
-          img: SaitheDeepSkinnedTail,
-          caption: 'Skinless / Deep Skinned Tail Portion',
-        },
-        {
-          img: SaitheDeepSkinnedCentre,
-          caption: 'Skinless / Deep Skinned Centre Portion',
-        },
-      ],
-    },
+    map: SaitheMap,
+    sections: [
+      {
+        content: [
+          {
+            img: SaitheDeepSkinnedFillet,
+            caption: 'Skinless / Deep Skinned Fillet',
+          },
+          {
+            img: SaitheDeepSkinnedLoin,
+            caption: 'Skinless / Deep Skinned Loin',
+          },
+          {
+            img: SaitheDeepSkinnedTail,
+            caption: 'Skinless / Deep Skinned Tail Portion',
+          },
+          {
+            img: SaitheDeepSkinnedCentre,
+            caption: 'Skinless / Deep Skinned Centre Portion',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Yellowfin Sole',
     thumbnail: YellowfinSoleThumbnail,
-    content: {
-      map: YellowSoleMap,
-      forms: [
-        {
-          img: YellowSoleFilletBlock,
-          caption: 'Fillet Block',
-        },
-        {
-          img: YellowSoleSkinlessFillet,
-          caption: 'Skinless Fillet',
-        },
-        {
-          img: YellowSoleSkinlessMarried,
-          caption: 'Skinless Married Fillet',
-        },
-        {
-          img: YellowSoleWagiri,
-          caption: 'Wagiri',
-        },
-        {
-          img: YellowSoleRoll,
-          caption: 'Roll',
-        },
-      ],
-    },
+    map: YellowSoleMap,
+    sections: [
+      {
+        content: [
+          {
+            img: YellowSoleFilletBlock,
+            caption: 'Fillet Block',
+          },
+          {
+            img: YellowSoleSkinlessFillet,
+            caption: 'Skinless Fillet',
+          },
+          {
+            img: YellowSoleSkinlessMarried,
+            caption: 'Skinless Married Fillet',
+          },
+          {
+            img: YellowSoleWagiri,
+            caption: 'Wagiri',
+          },
+          {
+            img: YellowSoleRoll,
+            caption: 'Roll',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Atlantic Mackerel',
     thumbnail: AtlanticMackerelThumbnail,
-    content: {
-      map: AtlanticMackerelMap,
-      forms: [
-        {
-          img: AtlanticMackerelThumbnail,
-          caption: 'Atlantic Mackerel',
-        },
-      ],
-    },
+    map: AtlanticMackerelMap,
+    sections: [
+      {
+        content: [
+          {
+            img: AtlanticMackerelThumbnail,
+            caption: '',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Pacific Herring',
     thumbnail: PacificHerringThumbnail,
-    content: {
-      map: HerringMap,
-      forms: [],
-    },
+    map: HerringMap,
+    sections: [
+      {
+        content: [
+          {
+            img: PacificHerringThumbnail,
+            caption: '',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Pacific Saury',
     thumbnail: PacificSauryThumbnail,
-    content: {
-      map: SauryMap,
-      forms: [],
-    },
+    map: SauryMap,
+    sections: [
+      {
+        content: [
+          {
+            img: PacificSauryThumbnail,
+            caption: '',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Peruvian Anchovy',
     thumbnail: PeruvianAnchovyThumbnail,
-    content: {
-      map: PeruvianAnchovyMap,
-      forms: [],
-    },
+    map: PeruvianAnchovyMap,
+    sections: [
+      {
+        content: [
+          {
+            img: PeruvianAnchovyThumbnail,
+            caption: '',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Argentine Red Shrimp',
     thumbnail: ARShrimp,
-    content: {
-      map: ARShrimpMap,
-      forms: [],
-    },
+    map: ARShrimpMap,
+    sections: [
+      {
+        content: [
+          {
+            img: ARShrimp,
+            caption: '',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Red King Crab',
     thumbnail: RKCrab,
-    content: {
-      map: RKCrabMap,
-      forms: [],
-    },
+    sections: [
+      {
+        content: [
+          {
+            img: RKCrab,
+            caption: '',
+          },
+        ],
+      },
+    ],
+    map: RKCrabMap,
   },
 ];
