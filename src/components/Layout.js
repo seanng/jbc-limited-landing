@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { withPrefix } from 'gatsby'
-// import Footer from './Footer'
+import Footer from './Footer'
 import Navbar from './Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.sass'
@@ -44,7 +44,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       <div>{children}</div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
