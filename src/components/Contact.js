@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
@@ -13,13 +14,15 @@ function encode(data) {
     .join('&');
 }
 
+const INITIAL_STATE = {
+  'product-category': 'Personal Protective Equipment',
+};
+
 export default function Contact() {
   const [validationMessage, setValidationMessage] = useState('');
   const [isValidationError, setIsValidationError] = useState(false)
   const [isValidated, setIsValidated] = useState(false);
-  const [val, setVal] = useState({
-    'product-category': 'Personal Protective Equipment',
-  });
+  const [val, setVal] = useState(INITIAL_STATE);
   const handleChange = e => {
     setVal({
       ...val,
@@ -39,11 +42,13 @@ export default function Contact() {
       return;
     }
     try {
+      const name = `Contact-${val['product-category']}`
+      form.setAttribute('name', name);
       await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
-          'form-name': val['product-category'],
+          'form-name': name,
           ...val,
         }),
       });
@@ -51,6 +56,7 @@ export default function Contact() {
       setValidationMessage(`Thank you for your message, ${val.name}!`);
       setIsValidated(false);
       form.reset();
+      setVal(INITIAL_STATE);
     } catch (error) {
       setIsValidationError(true);
       setValidationMessage(
@@ -72,36 +78,56 @@ export default function Contact() {
           </Col>
         </Row>
         {/* FOR NETLIFY FORM BOTS */}
-        <div hidden>
-          <form netlify netlify-honeypot="bot-field" name="Personal Protective Equipment">
-            <input name="bot-field" />
-            <input type="text" name="product-category" />
+        <div style={{ display: 'none' }}>
+          <form
+            data-netlify-honeypot="bot-field"
+            data-netlify="true"
+            name="Contact-Personal Protective Equipment"
+          >
+            <input type="text" name="bot-field" />
+            <select name="product-category" />
             <input type="email" name="email" />
             <input type="text" name="name" />
+            <input type="text" name="country" />
             <input type="tel" name="phone" />
             <textarea name="message" />
           </form>
-          <form netlify netlify-honeypot="bot-field" name="Seafood">
-            <input name="bot-field" />
-            <input type="text" name="product-category" />
+          <form
+            data-netlify-honeypot="bot-field"
+            data-netlify="true"
+            name="Contact-Seafood"
+          >
+            <input type="text" name="bot-field" />
+            <select name="product-category" />
             <input type="email" name="email" />
             <input type="text" name="name" />
+            <input type="text" name="country" />
             <input type="tel" name="phone" />
             <textarea name="message" />
           </form>
-          <form netlify netlify-honeypot="bot-field" name="Durian">
-            <input name="bot-field" />
-            <input type="text" name="product-category" />
+          <form
+            data-netlify-honeypot="bot-field"
+            data-netlify="true"
+            name="Contact-Durian"
+          >
+            <input type="text" name="bot-field" />
+            <select name="product-category" />
             <input type="email" name="email" />
             <input type="text" name="name" />
+            <input type="text" name="country" />
             <input type="tel" name="phone" />
             <textarea name="message" />
           </form>
-          <form netlify netlify-honeypot="bot-field" name="Others">
-            <input name="bot-field" />
-            <input type="text" name="product-category" />
+          <form
+            data-netlify-honeypot="bot-field"
+            data-netlify="true"
+            name="Contact-Others"
+          >
+            <input type="text" name="bot-field" />
+            <select name="product-category" />
             <input type="email" name="email" />
             <input type="text" name="name" />
+            <input type="text" name="country" />
             <input type="tel" name="phone" />
             <textarea name="message" />
           </form>
@@ -116,7 +142,7 @@ export default function Contact() {
           <div hidden>
             <label>
               Don’t fill this out:{' '}
-              <input name="bot-field" onChange={handleChange} />
+              <input name="bot-field" type="text" onChange={handleChange} />
             </label>
           </div>
           <Row>
@@ -160,11 +186,7 @@ export default function Contact() {
           <Row className="pt-2">
             <Form.Group as={Col} sm={5}>
               <Form.Label>Phone</Form.Label>
-              <Form.Control
-                name="phone"
-                onChange={handleChange}
-                type="tel"
-              />
+              <Form.Control name="phone" onChange={handleChange} type="tel" />
             </Form.Group>
             <Col sm={2} />
             <Form.Group as={Col} sm={5}>
