@@ -45,7 +45,7 @@ import DurianPasteModal from './modals/DurianPaste'
 export default {
   'Personal Protective Equipment': [
     {
-      label: 'Medical and surgical masks',
+      label: 'Medical and Surgical Masks',
       description: '',
       Component: MasksModal,
       data: [
@@ -68,7 +68,7 @@ export default {
       ],
     },
     {
-      label: 'Protective wear',
+      label: 'Protective Wear',
       Component: ProtectiveWearModal,
       description: '',
       data: [
@@ -125,7 +125,7 @@ export default {
       page: 'seafood-species',
     },
     {
-      label: 'Battered & breaded products',
+      label: 'Battered & Breaded Products',
       description: '',
       data: [
         {
@@ -134,7 +134,7 @@ export default {
         },
         {
           img: BreadedSaw,
-          caption: 'Breaded Saw',
+          caption: 'Breaded Saw Portion',
         },
         {
           img: FishFinger,
@@ -155,7 +155,7 @@ export default {
       ],
     },
     {
-      label: 'Salted products',
+      label: 'Salted Products',
       description: '',
       data: [
         {
@@ -187,7 +187,7 @@ export default {
   ],
   Durian: [
     {
-      label: 'Fresh durian',
+      label: 'Fresh Durian',
       Component: FreshDurianModal,
       description:
         'Fresh durians flown in from Malaysia on a weekly basis when the fruit is in season. \n\nMalaysian durians are harvested only when they are ripe and fall from the trees unlike Thai durians which are plucked from the trees and ripen in the cargo containers on the journey to its final destination. \n\nWe offer popular species such as Musang King, D24, XO, D13, and D101 as well as highly sought after species such as Black Thorn and Red Prawn when in season.',
@@ -207,7 +207,7 @@ export default {
       ],
     },
     {
-      label: 'Frozen durian',
+      label: 'Frozen Durian',
       Component: FrozenDurianModal,
       description:
         'The main season in Malaysia is from June to August with a smaller season from December to January. Now, however, with the aid of the latest freezing technology, the durians are harvest during season and frozen immediately to be enjoyed any time of the year.\n\nThe ripened durians are harvested when they fall from the trees and inspected for cracks or punctures in the shells. Only fruits with perfect outer shells are then washed and frozen in a nitrogen freezer under -100 degrees for about 1 hour. Each durian is then vacuum packed and is ready for shipment to destinations around the world. \n\nSimply defrost the durian in room temperature, remove the fruitlets from the shell and enjoy the durian out of season.',
@@ -235,7 +235,7 @@ export default {
       ],
     },
     {
-      label: 'Durian paste',
+      label: 'Durian Paste',
       description:
         'Durian paste is made from the flesh of the durian, without the seeds. \n\nPacked in 2 kg bags, the paste is used as a filling or flavoring for many kinds of desserts from pastries to ice cream.',
       Component: DurianPasteModal,

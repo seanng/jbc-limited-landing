@@ -26,9 +26,14 @@ export default function OurProducts({ title, categories = [] }) {
     } else {
       setModalComponent(() =>
         subcat.Component ? (
-          <subcat.Component hide={hide} data={subcat.data} description={subcat.description} />
+          <subcat.Component
+            hide={hide}
+            data={subcat.data}
+            description={subcat.description}
+            label={subcat.label}
+          />
         ) : (
-          <DefaultModal hide={hide} data={subcat.data} />
+          <DefaultModal hide={hide} data={subcat.data} label={subcat.label} />
         )
       );
       setIsModalShown(true);
