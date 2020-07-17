@@ -185,12 +185,12 @@ export default function Contact() {
           </Row>
           <Row className="pt-2">
             <Form.Group as={Col} sm={5}>
-              <Form.Label>Phone</Form.Label>
+              <Form.Label>Phone (optional)</Form.Label>
               <Form.Control name="phone" onChange={handleChange} type="tel" />
             </Form.Group>
             <Col sm={2} />
             <Form.Group as={Col} sm={5}>
-              <Form.Label>Country</Form.Label>
+              <Form.Label>Country (optional)</Form.Label>
               <Form.Control
                 name="country"
                 onChange={handleChange}
