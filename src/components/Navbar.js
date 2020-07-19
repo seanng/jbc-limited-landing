@@ -29,20 +29,21 @@ const Navbar = () => {
           className="justify-content-end"
         >
           <Nav className="justify-content-end">
-            {LINKS.map(link => (
+            {LINKS.map((link, i) => (
               <Nav.Item
                 key={link.key}
                 onClick={() => {
                   setSelectedKey(link.key);
                 }}
               >
-                <Nav.Link
-                  className={selectedKey === link.key ? 'is-active' : ''}
-                  as={AnchorLink}
-                  to={`/#${link.key}`}
-                >
-                  {link.label}
-                </Nav.Link>
+                <AnchorLink to={`/#${link.key}`}>
+                  <Nav.Link
+                    className={selectedKey === link.key ? 'is-active' : ''}
+                    eventKey={i}
+                  >
+                    {link.label}
+                  </Nav.Link>
+                </AnchorLink>
               </Nav.Item>
             ))}
           </Nav>
