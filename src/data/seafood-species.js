@@ -129,12 +129,12 @@ export default [
           {
             img: AlaskaPollockSkinOn,
             caption:
-              'Skin On Fillet, Kosher Fillet, J-Cut Fillet, V-Cut Fillet',
+              'Skin On Fillet, Kosher Fillet, J-Cut Fillet, V-Cut Fillet (L-R)',
           },
           {
             img: AlaskaPollockSkinlessFilletNugget,
             caption:
-              'Skinless Loin, Skinless Fillet, Skinless Nugget, Skinless Tail Portion',
+              'Skinless Loin, Skinless Fillet, Skinless Nugget, Skinless Tail Portion (L-R)',
           },
         ],
       },
@@ -217,14 +217,14 @@ export default [
             caption: `Pink Salmon Portion
             - Skin On
             - Skinless Fat Line In
-            - Deep Skinned Fat Line Out`,
+            - Deep Skinned Fat Line Out (L-R)`,
           },
           {
             img: PinkSalmonFillet,
             caption: `Pink Salmon Fillet
             - Skin On
             - Skinless Fat Line In
-            - Deep Skinned Fat Line Out`
+            - Deep Skinned Fat Line Out (L-R)`
           },
         ],
       },

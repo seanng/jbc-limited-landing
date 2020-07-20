@@ -66,7 +66,9 @@ export default function OurProducts({ title, categories = [] }) {
                           imageInfo={thumbnail}
                         />
                       </div>
-                      {label}
+                      <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                        {label}
+                      </div>
                     </Nav.Link>
                   </Nav.Item>
                 ))}

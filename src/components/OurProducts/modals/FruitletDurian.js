@@ -18,7 +18,10 @@ export default function FruitletDurianModal({ hide, data, description, label }) 
         </Row>
         <Row className="pt-4">
           <Col>
-            <p style={{ fontSize: 22 }} className="prewrap text-grey">
+            <p
+              style={{ fontSize: 22 }}
+              className="prewrap text-justify text-grey"
+            >
               {description}
             </p>
           </Col>

@@ -11,11 +11,19 @@ export default function ProtectiveWearModal({ hide=() => {}, data=[] }) {
     <Modal.Body>
       <ModalHeader hide={hide} />
       <Container className="pb-5">
+        <Row className="justify-content-center text-center pt-3 pb-3">
+          <div className="modal-title-wrapper mt-5">
+            <h1 className="index-title">Protective Wear</h1>
+          </div>
+        </Row>
         <Row>
           {data.map(item => (
             <Col xs={12} sm={6} xl={4} key={item.caption} className="pt-5">
               <Card className="h-100">
-                <Card.Img style={{ height: item.caption === 'Face Shield' ? 320 : 500} } src={item.img} />
+                <Card.Img
+                  style={{ height: item.caption === 'Face Shield' ? 320 : 500 }}
+                  src={item.img}
+                />
                 <Card.Body>
                   <Card.Text>{item.caption}</Card.Text>
                 </Card.Body>
@@ -25,5 +33,5 @@ export default function ProtectiveWearModal({ hide=() => {}, data=[] }) {
         </Row>
       </Container>
     </Modal.Body>
-  )
+  );
 }
