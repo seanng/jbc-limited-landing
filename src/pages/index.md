@@ -28,14 +28,14 @@ products:
   categories:
     - label: Personal Protective Equipment
       thumbnail: /img/ppe.png
-      description: We work directly with the plants to secure face masks, gloves,
-        gowns, and other personal protective equipment (PPE) for our customers
-        worldwide. Our network of plants located in China, Vietnam, Malaysia,
-        and Thailand provides competitive pricing, stability of supply, and
-        access to immediate stock. Before each shipment, our own QC team is on
-        hand to ensure that the quality matches our customers’ specifications
-        and that each shipment meets the regulatory requirements of the
-        exporting and importing country.
+      description: We work directly with the plants to secure respirators, face masks,
+        gloves, isolation gowns, and other personal protective equipment (PPE)
+        for our customers worldwide. Our network of plants located in China,
+        Vietnam, Malaysia, and Thailand provides competitive pricing, stability
+        of supply, and access to immediate stock. Before each shipment, our own
+        QC team is on hand to ensure that the quality matches our customers’
+        specifications and that each shipment meets the regulatory requirements
+        of the exporting and importing country.
       images:
         - source: /img/ppe-landing-1.jpg
           name: PPE 1
