@@ -27,12 +27,12 @@ export default function FreshDurianModal({ hide, data, description, label }) {
           </Col>
         </Row>
         <Row>
-          {data.map(item => (
+          {data.map((item, i) => (
             <Col xs={12} sm={6} key={item.caption} className="pt-5">
               <Card className="h-100">
                 <Card.Img
                   src={item.img}
-                  style={{ height: 300, objectFit: 'cover' }}
+                  style={{ height: i > 1 ? 350 : 300, objectFit: 'cover' }}
                 />
                 <Card.Body>
                   <Card.Text>{item.caption}</Card.Text>

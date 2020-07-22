@@ -6,6 +6,13 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import ModalHeader from '../../ModalHeader'
 
+const getCardImgHeight = (i) => {
+  if (i > 7) {
+    return 230
+  }
+  return i > 3 ? 280 : 500;
+}
+
 export default function ProtectiveWearModal({ hide=() => {}, data=[] }) {
   return (
     <Modal.Body>
@@ -17,11 +24,11 @@ export default function ProtectiveWearModal({ hide=() => {}, data=[] }) {
           </div>
         </Row>
         <Row>
-          {data.map(item => (
-            <Col xs={12} sm={6} xl={4} key={item.caption} className="pt-5">
+          {data.map((item, i) => (
+            <Col sm={12} md={6} xl={3} key={item.caption} className="pt-5">
               <Card className="h-100">
                 <Card.Img
-                  style={{ height: item.caption === 'Face Shield' ? 320 : 500 }}
+                  style={{ height: getCardImgHeight(i) }}
                   src={item.img}
                 />
                 <Card.Body>

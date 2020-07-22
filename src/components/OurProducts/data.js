@@ -3,18 +3,23 @@ import N95 from '../../assets/img/products/ppe/N95 NIOSH-Approved.png';
 import SurgicalMask from '../../assets/img/products/ppe/Surgical or Medical or Non-Medical Face Mask.png';
 import KN95 from '../../assets/img/products/ppe/KN95 Mask.png';
 import SurgicalGown from '../../assets/img/products/ppe/Surgical Gown.png';
-import FaceShield from '../../assets/img/products/ppe/Face Shield.png';
+import FaceShield from '../../assets/img/products/ppe/Faceshield.jpg';
+import Gloves from '../../assets/img/products/ppe/Gloves.png';
+import Scrub from '../../assets/img/products/ppe/Scrub.png';
+import InfraredBluetoothThermometer from '../../assets/img/products/ppe/Infrared Bluetooth Thermometer1.png';
+import ShoeCovers from '../../assets/img/products/ppe/shoes-cover-500x500.png';
+import BootCovers from '../../assets/img/products/ppe/Boot covers.jpg';
+import HeadCover from '../../assets/img/products/ppe/Head cover 1.png';
 import Goggle from '../../assets/img/products/ppe/Goggle.jpeg';
 import AlcoholHandSanitizer from '../../assets/img/products/ppe/Alcohol Hand Sanitizer.png';
 import ElectrostaticBackpackSprayer from '../../assets/img/products/ppe/Electrostatic Backpack Sprayer.jpg';
 import IsolationGown from '../../assets/img/products/ppe/Non-Surgical Isolation Gown (2).jpeg';
-import MedicalPowderFree from '../../assets/img/products/ppe/Medical, Powder free, Nitrile Examination Gloves, thickness 6 millimetre.png';
 import AlcoholWipes from '../../assets/img/products/ppe/Alcohol Wipes.jpeg';
 import DisposableProtectiveClothing from '../../assets/img/products/ppe/Medical Disposable Protective Clothing with hood.png';
 
-import FreshDurian1 from '../../assets/img/products/durian/Fresh/1.jpg';
-import FreshDurian4 from '../../assets/img/products/durian/Fresh/4.jpg';
+import FreshDurian24 from '../../assets/img/products/durian/Fresh/D24 Sultan.jpeg';
 import FreshDurian5 from '../../assets/img/products/durian/Fresh/5.jpeg';
+import FreshDurian4 from '../../assets/img/products/durian/Fresh/4.jpg';
 import FrozenDurian1 from '../../assets/img/products/durian/Frozen/Frozen Whole Durian.jpg';
 import FrozenDurian2 from '../../assets/img/products/durian/Frozen/Vacuum Packed Frozen Durian.jpg';
 import DurianPaste from '../../assets/img/products/durian/Durian paste/Durian Paste.jpeg';
@@ -82,11 +87,32 @@ export default {
         },
         {
           img: IsolationGown,
-          caption: 'Non-Surgical Isolation Gown',
+          caption: 'Isolation Gown',
+        },
+        {
+          img: Scrub,
+          caption: 'Scrub',
+        },
+        {
+          img: BootCovers,
+          caption: 'Boot Covers',
+        },
+        {
+          img: ShoeCovers,
+          caption: 'Shoe Covers',
+        },
+        {
+          img: HeadCover,
+          caption: 'Head Cover',
         },
         {
           img: FaceShield,
           caption: 'Face Shield',
+        },
+        {
+          img: Gloves,
+          caption:
+            'Medical, Powder free, Nitrile / Latex / Vinyl and Nitrile Blended Examination Gloves',
         },
       ],
     },
@@ -105,16 +131,15 @@ export default {
         },
         {
           img: Goggle,
-          caption: 'Goggle',
-        },
-        {
-          img: MedicalPowderFree,
-          caption:
-            'Medical, Powder free, Nitrile Examination Gloves, thickness 6 millimetre',
+          caption: 'Goggles',
         },
         {
           img: AlcoholWipes,
           caption: '75% Alcohol Wipes',
+        },
+        {
+          img: InfraredBluetoothThermometer,
+          caption: 'Infrared Bluetooth Thermometer',
         },
       ],
     },
@@ -193,15 +218,15 @@ export default {
         'Fresh durians flown in from Malaysia on a weekly basis when the fruit is in season. \n\nMalaysian durians are harvested only when they are ripe and fall from the trees unlike Thai durians which are plucked from the trees and ripen in the cargo containers on the journey to its final destination. \n\nWe offer popular species such as Musang King, D24, XO, D13, and D101 as well as highly sought after species such as Black Thorn and Red Prawn when in season.',
       data: [
         {
-          img: FreshDurian1,
+          img: FreshDurian5,
           caption: 'D197 AA - Musang King',
         },
         {
           img: FreshDurian4,
-          caption: 'D97 AA - Musang King and D24 Sultan',
+          caption: 'D197 AA - Musang King and D24 Sultan',
         },
         {
-          img: FreshDurian5,
+          img: FreshDurian24,
           caption: 'D24 Sultan',
         },
       ],
