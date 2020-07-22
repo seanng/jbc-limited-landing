@@ -22,7 +22,7 @@ import FreshDurian5 from '../../assets/img/products/durian/Fresh/5.jpeg';
 import FreshDurian4 from '../../assets/img/products/durian/Fresh/4.jpg';
 import FrozenDurian1 from '../../assets/img/products/durian/Frozen/Frozen Whole Durian.jpg';
 import FrozenDurian2 from '../../assets/img/products/durian/Frozen/Vacuum Packed Frozen Durian.jpg';
-import DurianPaste from '../../assets/img/products/durian/Durian paste/Durian Paste.jpeg';
+import DurianPaste from '../../assets/img/products/durian/Durian paste/durian-paste-2.jpeg';
 import Foodlet3 from '../../assets/img/products/durian/foodlet/foodlet3.jpg';
 
 import BreadedFillet from '../../assets/img/products/seafood/bnb/Breaded Fillet.jpg';
